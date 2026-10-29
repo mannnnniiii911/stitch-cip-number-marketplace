@@ -35,11 +35,25 @@
 <style data-purpose="custom-decorations">
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-    body {
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
       background-color: #060608;
       color: #ffffff;
       -webkit-font-smoothing: antialiased;
       font-family: 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Prevent auto-zooming on iPhone/iOS Safari by keeping font size >= 16px */
+    @media (max-width: 640px) {
+      input.vip-input, select.vip-input, textarea.vip-input {
+        font-size: 16px !important;
+      }
     }
     
     .gold-gradient-badge {
@@ -53,6 +67,9 @@
 
     .method-card {
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .method-card.active {
@@ -115,35 +132,35 @@
 <!-- END: Header -->
 
 <!-- BEGIN: MainContent -->
-<main class="flex-1 max-w-[1380px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-7 md:py-8">
+<main class="flex-1 max-w-[1380px] w-full mx-auto px-3 sm:px-6 lg:px-8 py-5 md:py-8">
   <!-- Back to Collection link -->
-  <div class="mb-5">
-    <a class="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors group" href="index.html#collection-section" id="back-link">
+  <div class="mb-4 sm:mb-5">
+    <a class="inline-flex items-center gap-2 text-xs sm:text-sm text-gray-300 hover:text-white transition-colors group" href="index.html#collection-section" id="back-link">
       <span class="text-base group-hover:-translate-x-0.5 transition-transform">←</span>
       <span>Back to Collection</span>
     </a>
   </div>
 
   <!-- Main Two-Column Grid Layout -->
-  <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 items-start">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-7 items-start">
     
     <!-- ================= LEFT COLUMN ================= -->
-    <div class="lg:col-span-7 flex flex-col gap-6">
+    <div class="lg:col-span-7 flex flex-col gap-5 sm:gap-6">
       
       <!-- BEGIN: VipHeroCard -->
-      <section class="hero-card-border bg-[#0d0e13] rounded-2xl p-6 md:p-8 relative overflow-hidden" data-purpose="hero-vip-banner">
+      <section class="hero-card-border bg-[#0d0e13] rounded-2xl p-4 sm:p-6 md:p-8 relative overflow-hidden" data-purpose="hero-vip-banner">
         <!-- VIP Number Badge & Pricing Header Row -->
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4">
           <!-- Badge -->
-          <span class="gold-gradient-badge text-black font-extrabold text-xs uppercase px-4 py-1.5 rounded-full tracking-wider shadow-sm" id="hero-badge">
+          <span class="gold-gradient-badge text-black font-extrabold text-[11px] sm:text-xs uppercase px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full tracking-wider shadow-sm" id="hero-badge">
             VIP NUMBER
           </span>
           <!-- Pricing Right Stack -->
-          <div class="text-left sm:text-right flex sm:flex-col items-baseline sm:items-end gap-3 sm:gap-0">
-            <span class="text-gray-400 line-through text-base sm:text-lg font-medium" id="hero-original-price">₹18,000</span>
-            <div class="flex items-center gap-2.5 mt-0 sm:mt-0.5">
-              <span class="text-[#F5A623] text-3xl sm:text-[34px] font-black tracking-tight leading-none" id="hero-final-price">₹12,250</span>
-              <span class="gold-gradient-badge text-black text-xs font-black px-2.5 py-0.5 rounded-md tracking-tight" id="hero-discount-badge">
+          <div class="text-left sm:text-right flex sm:flex-col items-baseline sm:items-end gap-2.5 sm:gap-0">
+            <span class="text-gray-400 line-through text-sm sm:text-base md:text-lg font-medium" id="hero-original-price">₹18,000</span>
+            <div class="flex items-center gap-2 mt-0 sm:mt-0.5">
+              <span class="text-[#F5A623] text-2xl sm:text-3xl md:text-[34px] font-black tracking-tight leading-none" id="hero-final-price">₹12,250</span>
+              <span class="gold-gradient-badge text-black text-[10px] sm:text-xs font-black px-2 sm:px-2.5 py-0.5 rounded-md tracking-tight" id="hero-discount-badge">
                 31% OFF
               </span>
             </div>
@@ -151,28 +168,28 @@
         </div>
 
         <!-- Main VIP Phone Number Display -->
-        <div class="mt-4 mb-6">
-          <h1 class="text-[#F5A623] text-4xl sm:text-[54px] font-extrabold tracking-wider leading-none" id="hero-phone-display">
+        <div class="mt-3 sm:mt-4 mb-4 sm:mb-6 overflow-hidden">
+          <h1 class="text-[#F5A623] text-[26px] min-[360px]:text-3xl sm:text-4xl md:text-[54px] font-extrabold tracking-wider leading-none break-keep" id="hero-phone-display">
             70101 <span class="ml-2 sm:ml-4">06666</span>
           </h1>
         </div>
 
         <!-- Countdown Timer Pill -->
-        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-gray-800 bg-[#07080a] text-sm mb-6">
+        <div class="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-gray-800 bg-[#07080a] text-xs sm:text-sm mb-4 sm:mb-6 max-w-full flex-wrap">
           <span class="flex items-center gap-1.5 text-[#F5A623] font-semibold">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
             <span id="countdown-timer">04:31:57</span>
           </span>
-          <span class="text-gray-300 font-normal">Limited time offer</span>
+          <span class="text-gray-300 font-normal text-[11px] sm:text-sm">Limited time offer</span>
         </div>
 
         <!-- Key Selling Features List -->
-        <div class="pt-5 border-t border-[#1d1f27] grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-gray-300">
+        <div class="pt-4 sm:pt-5 border-t border-[#1d1f27] grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 text-xs sm:text-sm text-gray-300">
           <div class="flex items-center gap-2">
-            <span class="text-[#F5A623]">
+            <span class="text-[#F5A623] flex-shrink-0">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path clip-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" fill-rule="evenodd"></path>
               </svg>
@@ -180,7 +197,7 @@
             <span>Easy to remember</span>
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-[#F5A623]">
+            <span class="text-[#F5A623] flex-shrink-0">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
               </svg>
@@ -188,7 +205,7 @@
             <span>Premium &amp; Exclusive</span>
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-[#F5A623]">
+            <span class="text-[#F5A623] flex-shrink-0">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                 <path clip-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" fill-rule="evenodd"></path>
               </svg>
@@ -199,18 +216,23 @@
       </section>
       <!-- END: VipHeroCard -->
 
-      <!-- BEGIN: PaymentMethodSelection -->
-      <section class="bg-[#0b0c10] border border-[#1b1c24] rounded-2xl p-6 md:p-7" data-purpose="payment-options">
-        <div class="mb-5">
-          <h2 class="text-xl font-bold text-white tracking-tight">Choose Payment Method</h2>
-          <p class="text-sm text-gray-400 mt-1">Select your preferred payment option to proceed.</p>
+      <!-- BEGIN: PaymentMethodSelection (Desktop Layout: md:block, hidden on mobile) -->
+      <section class="bg-[#0b0c10] border border-[#1b1c24] rounded-2xl p-6 md:p-7 hidden md:block" data-purpose="payment-options">
+        <div class="mb-5 flex items-center justify-between">
+          <div>
+            <h2 class="text-xl font-bold text-white tracking-tight">Choose Payment Method</h2>
+            <p class="text-sm text-gray-400 mt-1">Select your preferred payment option to proceed.</p>
+          </div>
+          <span class="text-[11px] font-semibold text-[#F5A623] bg-[#241a08] border border-[#4d360f] px-3 py-1 rounded-full">
+            Zero Extra Fee
+          </span>
         </div>
 
         <!-- Methods Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" id="payment-options-group">
           
           <!-- Option 1: UPI (Default Active) -->
-          <div class="method-card active relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between" data-method="UPI">
+          <div class="method-card active relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between transition-all" data-method="UPI">
             <div class="flex items-center gap-3.5">
               <!-- UPI Custom SVG Icon -->
               <div class="w-11 h-11 rounded-lg bg-[#14161f] border border-[#222430] flex items-center justify-center p-2 flex-shrink-0">
@@ -232,26 +254,8 @@
             </div>
           </div>
 
-          <!-- Option 2: Paytm -->
-          <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between" data-method="Paytm">
-            <div class="flex items-center gap-3.5">
-              <!-- Paytm Logo -->
-              <div class="w-11 h-11 rounded-lg bg-[#002e6e] border border-[#003988] flex items-center justify-center p-2 flex-shrink-0">
-                <svg class="w-full h-auto" viewBox="0 0 60 22">
-                  <text fill="#00baf2" font-family="Arial, sans-serif" font-size="16" font-weight="900" x="0" y="16">pay</text>
-                  <text fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="900" x="30" y="16">tm</text>
-                </svg>
-              </div>
-              <div>
-                <h3 class="font-bold text-white text-[15px] leading-tight">Paytm</h3>
-                <p class="text-xs text-gray-400 mt-0.5">Pay with Paytm</p>
-              </div>
-            </div>
-            <div class="radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0"></div>
-          </div>
-
-          <!-- Option 3: PhonePe -->
-          <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between" data-method="PhonePe">
+          <!-- Option 2: PhonePe -->
+          <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between transition-all" data-method="PhonePe">
             <div class="flex items-center gap-3.5">
               <!-- PhonePe Logo Icon -->
               <div class="w-11 h-11 rounded-lg bg-[#5f259f] flex items-center justify-center flex-shrink-0 text-white font-bold text-xl">
@@ -265,8 +269,8 @@
             <div class="radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0"></div>
           </div>
 
-          <!-- Option 4: Google Pay -->
-          <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between" data-method="Google Pay">
+          <!-- Option 3: Google Pay -->
+          <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between transition-all" data-method="Google Pay">
             <div class="flex items-center gap-3.5">
               <!-- GPay Emblem -->
               <div class="w-11 h-11 rounded-lg bg-[#14161f] border border-[#222430] flex items-center justify-center p-2 flex-shrink-0">
@@ -285,16 +289,39 @@
             <div class="radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0"></div>
           </div>
 
-          <!-- Option 5: Navi Pay -->
-          <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between sm:col-span-1" data-method="Navi Pay">
+          <!-- Option 4: Paytm -->
+          <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between transition-all" data-method="Paytm">
             <div class="flex items-center gap-3.5">
-              <!-- Navi Pay Emblem -->
-              <div class="w-11 h-11 rounded-lg bg-[#00D09C] flex items-center justify-center flex-shrink-0">
-                <span class="text-white font-black text-2xl lowercase tracking-tighter">n</span>
+              <!-- Paytm Logo -->
+              <div class="w-11 h-11 rounded-lg bg-[#002e6e] border border-[#003988] flex items-center justify-center p-2 flex-shrink-0">
+                <svg class="w-full h-auto" viewBox="0 0 60 22">
+                  <text fill="#00baf2" font-family="Arial, sans-serif" font-size="16" font-weight="900" x="0" y="16">pay</text>
+                  <text fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="900" x="30" y="16">tm</text>
+                </svg>
               </div>
               <div>
-                <h3 class="font-bold text-white text-[15px] leading-tight">Navi Pay</h3>
-                <p class="text-xs text-gray-400 mt-0.5">Pay with Navi</p>
+                <h3 class="font-bold text-white text-[15px] leading-tight">Paytm</h3>
+                <p class="text-xs text-gray-400 mt-0.5">Pay with Paytm</p>
+              </div>
+            </div>
+            <div class="radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0"></div>
+          </div>
+
+          <!-- Option 5: QR Code (Spans 2 columns on desktop) -->
+          <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-4 flex items-center justify-between sm:col-span-2 transition-all" data-method="QR Code">
+            <div class="flex items-center gap-3.5">
+              <!-- QR Code Icon -->
+              <div class="w-11 h-11 rounded-lg bg-[#191508] border border-[#F5A623]/40 flex items-center justify-center p-2 flex-shrink-0 text-[#F5A623]">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                  <path d="M3 3h7v7H3V3zm2 2v3h3V5H5zm8-2h7v7h-7V3zm2 2v3h3V5h-3zM3 13h7v7H3v-7zm2 2v3h3v-3H5zm8 0h3v3h-3v-3zm4 0h3v3h-3v-3zm-4 4h3v3h-3v-3zm4 4h3v-3h-3v3zm0-8h3v-3h-3v3z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-white text-[15px] leading-tight flex items-center gap-2">
+                  <span>QR Code</span>
+                  <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-[#F5A623]/20 text-[#F5A623] border border-[#F5A623]/30">Scan &amp; Pay</span>
+                </h3>
+                <p class="text-xs text-gray-400 mt-0.5">Scan and pay instantly using any UPI app</p>
               </div>
             </div>
             <div class="radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0"></div>
@@ -302,20 +329,20 @@
         </div>
 
         <!-- BEGIN: SecurePaymentBanner -->
-        <div class="mt-6 p-4 rounded-xl border border-[#302714] bg-[#111012] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-lg bg-[#241a08] border border-[#4d360f] flex items-center justify-center text-[#F5A623] flex-shrink-0">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+        <div class="mt-6 p-3.5 sm:p-4 rounded-xl border border-[#302714] bg-[#111012] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#241a08] border border-[#4d360f] flex items-center justify-center text-[#F5A623] flex-shrink-0">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current" viewBox="0 0 20 20">
                 <path clip-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" fill-rule="evenodd"></path>
               </svg>
             </div>
             <div>
-              <h4 class="text-sm font-bold text-[#F5A623]">Secure &amp; Safe Payment</h4>
-              <p class="text-xs text-gray-300">Your payment information is encrypted and 100% secure.</p>
+              <h4 class="text-xs sm:text-sm font-bold text-[#F5A623]">Secure &amp; Safe Payment</h4>
+              <p class="text-[11px] sm:text-xs text-gray-300">Your payment information is encrypted and 100% secure.</p>
             </div>
           </div>
           <!-- Authentic Payment Gateway Badges -->
-          <div class="flex items-center gap-3 self-end sm:self-center">
+          <div class="flex items-center flex-wrap gap-2.5 self-start sm:self-center">
             <!-- UPI -->
             <span class="text-[11px] font-black italic tracking-wider text-gray-200 bg-[#1c1d24] px-1.5 py-0.5 rounded">UPI▶</span>
             <!-- VISA -->
@@ -340,23 +367,23 @@
     <div class="lg:col-span-5 flex flex-col gap-6">
       
       <!-- BEGIN: OrderSummaryCard -->
-      <section class="bg-[#0b0c10] border border-[#1b1c24] rounded-2xl p-6 md:p-7 shadow-xl" data-purpose="order-summary-card">
+      <section class="bg-[#0b0c10] border border-[#1b1c24] rounded-2xl p-4 sm:p-6 md:p-7 shadow-xl" data-purpose="order-summary-card">
         <div class="flex items-center justify-between mb-4">
-          <h2 class="text-xl font-bold text-white tracking-tight">Order Summary</h2>
-          <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#F5A623] px-2.5 py-1 rounded-full bg-[#241a08] border border-[#4d360f]">
+          <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Order Summary</h2>
+          <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#F5A623] px-2.5 py-1 rounded-full bg-[#241a08] border border-[#4d360f] flex-shrink-0">
             Verified Number
           </span>
         </div>
 
         <!-- Mini VIP Preview Card Container -->
-        <div class="flex items-center gap-4 pb-5 border-b border-[#1b1c24]">
+        <div class="flex items-center gap-3 sm:gap-4 pb-5 border-b border-[#1b1c24]">
           <!-- Miniature Golden VIP Card Graphic -->
-          <div class="w-24 h-16 rounded-lg bg-gradient-to-br from-[#1d170a] via-[#120f06] to-[#0a0802] border border-[#7a5518] p-2 flex flex-col justify-between shadow-inner relative flex-shrink-0">
+          <div class="w-20 sm:w-24 h-14 sm:h-16 rounded-lg bg-gradient-to-br from-[#1d170a] via-[#120f06] to-[#0a0802] border border-[#7a5518] p-1.5 sm:p-2 flex flex-col justify-between shadow-inner relative flex-shrink-0">
             <div class="flex justify-between items-center">
               <span class="w-2.5 h-2 rounded bg-[#9c6f21] inline-block opacity-80"></span>
               <span class="text-[7px] font-black text-black bg-[#F5A623] px-1 rounded-[2px] leading-tight">VIP</span>
             </div>
-            <div class="text-[9px] font-extrabold text-[#F5A623] tracking-wider text-center font-mono" id="mini-card-number">
+            <div class="text-[8px] sm:text-[9px] font-extrabold text-[#F5A623] tracking-wider text-center font-mono truncate" id="mini-card-number">
               70101 06666
             </div>
             <div class="text-[5px] text-gray-500 flex justify-between font-mono">
@@ -366,14 +393,14 @@
           </div>
 
           <!-- Card Info Stack -->
-          <div class="flex flex-col">
-            <span class="text-xs text-gray-400">VIP Mobile Number</span>
-            <span class="text-base font-bold text-white mt-0.5 font-mono tracking-tight" id="summary-phone-number">70101 06666</span>
-            <div class="flex items-center gap-1.5 text-xs text-gray-400 mt-1">
+          <div class="flex flex-col min-w-0 flex-1">
+            <span class="text-[11px] sm:text-xs text-gray-400">VIP Mobile Number</span>
+            <span class="text-sm sm:text-base font-bold text-white mt-0.5 font-mono tracking-tight truncate" id="summary-phone-number">70101 06666</span>
+            <div class="flex items-center gap-1.5 text-xs text-gray-400 mt-1 min-w-0">
               <svg class="w-3.5 h-3.5 text-gray-400 fill-current inline flex-shrink-0" viewBox="0 0 20 20">
                 <path clip-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" fill-rule="evenodd"></path>
               </svg>
-              <span class="truncate" id="summary-product-name">Premium • Easy to remember</span>
+              <span class="truncate text-[11px] sm:text-xs" id="summary-product-name">Premium • Easy to remember</span>
             </div>
           </div>
         </div>
@@ -396,7 +423,7 @@
 
         <!-- ================= BEGIN: CUSTOMER DETAILS FORM ================= -->
         <form class="pt-5 space-y-4" id="customer-details-form" novalidate onsubmit="return false;">
-          <div class="flex items-center justify-between pb-1">
+          <div class="flex items-center justify-between pb-1 flex-wrap gap-1">
             <h3 class="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
               <span class="text-[#F5A623]">📝</span> Customer &amp; SIM Delivery Details
             </h3>
@@ -426,13 +453,13 @@
 
           <!-- 3. WhatsApp Number (with checkbox) -->
           <div>
-            <div class="flex items-center justify-between mb-1">
+            <div class="flex flex-wrap items-center justify-between gap-1 mb-1">
               <label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wide" for="cust-whatsapp">
                 WhatsApp Number <span class="text-[#F5A623]">*</span>
               </label>
               <label class="inline-flex items-center gap-1.5 cursor-pointer text-[11px] text-[#F5A623] hover:underline font-medium">
                 <input class="rounded border-gray-700 bg-[#14161f] text-[#F5A623] focus:ring-0 w-3.5 h-3.5 cursor-pointer accent-[#F5A623]" id="same-as-mobile" type="checkbox"/>
-                <span>Same as mobile number</span>
+                <span>Same as mobile</span>
               </label>
             </div>
             <div class="relative flex items-center">
@@ -513,6 +540,126 @@
             <p class="text-[11px] text-rose-400 mt-1 hidden" id="err-pincode">PIN Code must be exactly 6 digits</p>
           </div>
 
+          <!-- ================= BEGIN: MOBILE PAYMENT METHOD SECTION ================= -->
+          <!-- Visible only on mobile (< 768px / md breakpoint). Positioned after PIN Code, before CTA. -->
+          <div class="block md:hidden mt-2" id="mobile-payment-selection">
+            <div class="bg-[#0b0c10] border border-[#1b1c24] rounded-2xl p-4 shadow-lg">
+              <div class="flex items-center justify-between mb-2.5">
+                <label class="text-[11px] font-semibold text-gray-300 uppercase tracking-wide flex items-center gap-1.5">
+                  <span class="text-[#F5A623]">💳</span> Payment Method <span class="text-[#F5A623]">*</span>
+                </label>
+                <span class="text-[10px] text-[#F5A623] font-semibold bg-[#241a08] border border-[#4d360f] px-2 py-0.5 rounded-full flex-shrink-0">
+                  Zero Extra Fee
+                </span>
+              </div>
+              <p class="text-[11px] text-gray-400 mb-3">Choose how you would like to complete your payment:</p>
+
+              <!-- Methods Grid for Mobile -->
+              <div class="grid grid-cols-1 min-[480px]:grid-cols-2 gap-2 sm:gap-2.5" id="mobile-payment-options-group">
+                
+                <!-- Option 1: UPI -->
+                <div class="method-card active relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-3 flex items-center justify-between gap-3 transition-all" data-method="UPI">
+                  <div class="flex items-center gap-3 min-w-0 flex-1">
+                    <div class="w-10 h-10 rounded-lg bg-[#14161f] border border-[#222430] flex items-center justify-center p-2 flex-shrink-0">
+                      <svg class="w-full h-full" viewBox="0 0 48 48">
+                        <polygon fill="#097939" points="12,38 24,10 24,38"></polygon>
+                        <polygon fill="#ED752E" points="36,10 24,38 24,10"></polygon>
+                      </svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <h4 class="font-bold text-white text-sm leading-tight truncate">UPI</h4>
+                      <p class="text-[11px] text-gray-400 mt-0.5 truncate">Any UPI App (GPay, PhonePe, Paytm)</p>
+                    </div>
+                  </div>
+                  <div class="radio-indicator w-5 h-5 rounded-full border-2 border-[#F5A623] bg-[#F5A623] flex items-center justify-center flex-shrink-0 ml-1">
+                    <svg class="w-3 h-3 text-black stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Option 2: PhonePe -->
+                <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-3 flex items-center justify-between gap-3 transition-all" data-method="PhonePe">
+                  <div class="flex items-center gap-3 min-w-0 flex-1">
+                    <div class="w-10 h-10 rounded-lg bg-[#5f259f] flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">
+                      <span>पे</span>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <h4 class="font-bold text-white text-sm leading-tight truncate">PhonePe</h4>
+                      <p class="text-[11px] text-gray-400 mt-0.5 truncate">Pay directly via PhonePe</p>
+                    </div>
+                  </div>
+                  <div class="radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0 ml-1"></div>
+                </div>
+
+                <!-- Option 3: Google Pay -->
+                <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-3 flex items-center justify-between gap-3 transition-all" data-method="Google Pay">
+                  <div class="flex items-center gap-3 min-w-0 flex-1">
+                    <div class="w-10 h-10 rounded-lg bg-[#14161f] border border-[#222430] flex items-center justify-center p-2 flex-shrink-0">
+                      <svg class="w-6 h-6" viewBox="0 0 24 24">
+                        <path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.01h3.87c2.26-2.09 3.67-5.17 3.67-9.11z" fill="#4285F4"></path>
+                        <path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.87-3.01c-1.08.72-2.45 1.16-4.06 1.16-3.13 0-5.78-2.11-6.73-4.96H1.25v3.1C3.23 21.3 7.34 24 12 24z" fill="#34A853"></path>
+                        <path d="M5.27 14.28a7.2 7.2 0 0 1 0-4.56v-3.1H1.25a11.97 11.97 0 0 0 0 10.76l4.02-3.1z" fill="#FBBC05"></path>
+                        <path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.23 2.7 1.25 6.62l4.02 3.1c.95-2.85 3.6-4.97 6.73-4.97z" fill="#EA4335"></path>
+                      </svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <h4 class="font-bold text-white text-sm leading-tight truncate">Google Pay</h4>
+                      <p class="text-[11px] text-gray-400 mt-0.5 truncate">Pay directly via GPay</p>
+                    </div>
+                  </div>
+                  <div class="radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0 ml-1"></div>
+                </div>
+
+                <!-- Option 4: Paytm -->
+                <div class="method-card relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-3 flex items-center justify-between gap-3 transition-all" data-method="Paytm">
+                  <div class="flex items-center gap-3 min-w-0 flex-1">
+                    <div class="w-10 h-10 rounded-lg bg-[#002e6e] border border-[#003988] flex items-center justify-center p-2 flex-shrink-0">
+                      <svg class="w-full h-auto" viewBox="0 0 60 22">
+                        <text fill="#00baf2" font-family="Arial, sans-serif" font-size="16" font-weight="900" x="0" y="16">pay</text>
+                        <text fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="900" x="30" y="16">tm</text>
+                      </svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <h4 class="font-bold text-white text-sm leading-tight truncate">Paytm</h4>
+                      <p class="text-[11px] text-gray-400 mt-0.5 truncate">Paytm UPI Wallet</p>
+                    </div>
+                  </div>
+                  <div class="radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0 ml-1"></div>
+                </div>
+
+                <!-- Option 5: QR Code -->
+                <div class="method-card min-[480px]:col-span-2 relative cursor-pointer border border-[#1f212a] bg-[#0f1015] hover:border-gray-600 rounded-xl p-3 flex items-center justify-between gap-3 transition-all" data-method="QR Code">
+                  <div class="flex items-center gap-3 min-w-0 flex-1">
+                    <div class="w-10 h-10 rounded-lg bg-[#191508] border border-[#F5A623]/40 flex items-center justify-center p-2 flex-shrink-0 text-[#F5A623]">
+                      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M3 3h7v7H3V3zm2 2v3h3V5H5zm8-2h7v7h-7V3zm2 2v3h3V5h-3zM3 13h7v7H3v-7zm2 2v3h3v-3H5zm8 0h3v3h-3v-3zm4 0h3v3h-3v-3zm-4 4h3v3h-3v-3zm4 4h3v-3h-3v3zm0-8h3v-3h-3v3z"></path>
+                      </svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <h4 class="font-bold text-white text-sm leading-tight truncate flex items-center gap-2">
+                        <span>QR Code</span>
+                        <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-[#F5A623]/20 text-[#F5A623] border border-[#F5A623]/30 flex-shrink-0">Scan &amp; Pay</span>
+                      </h4>
+                      <p class="text-[11px] text-gray-400 mt-0.5 truncate">Scan with any UPI app on next screen</p>
+                    </div>
+                  </div>
+                  <div class="radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0 ml-1"></div>
+                </div>
+
+              </div>
+
+              <!-- Secure Payment Badge (mobile inline) -->
+              <div class="mt-3 pt-3 border-t border-[#1b1c24] flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-[#F5A623] fill-current flex-shrink-0" viewBox="0 0 20 20">
+                  <path clip-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" fill-rule="evenodd"></path>
+                </svg>
+                <span class="text-[11px] text-gray-400">Secure &amp; encrypted payment – zero extra charges</span>
+              </div>
+            </div>
+          </div>
+          <!-- ================= END: MOBILE PAYMENT METHOD SECTION ================= -->
+
           <!-- General Form Alert Banner -->
           <div class="hidden bg-rose-950/40 border border-rose-500/40 rounded-xl p-3 text-xs text-rose-300 flex items-start gap-2" id="form-general-error">
             <span>⚠️</span>
@@ -529,9 +676,9 @@
 
           <!-- Primary CTA Button -->
           <div class="pt-2">
-            <button class="w-full py-4 px-6 rounded-xl bg-[#F5A623] hover:bg-[#ffb633] active:bg-[#e09419] text-black font-extrabold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-[#f5a623]/20 transition-all duration-150 transform hover:-translate-y-0.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" id="proceed-pay-btn" type="button">
-              <span id="btn-text">Save Details &amp; Proceed to Pay</span>
-              <span class="text-lg" id="btn-arrow">→</span>
+            <button class="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-xl bg-[#F5A623] hover:bg-[#ffb633] active:bg-[#e09419] text-black font-extrabold text-sm sm:text-base tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-[#f5a623]/20 transition-all duration-150 transform hover:-translate-y-0.5 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" id="proceed-pay-btn" type="button">
+              <span id="btn-text" class="truncate">Save Details &amp; Proceed to Pay</span>
+              <span class="text-lg flex-shrink-0" id="btn-arrow">→</span>
             </button>
           </div>
         </form>
@@ -596,24 +743,24 @@
 <!-- END: MainContent -->
 
 <!-- BEGIN: Payment Gateway Status / Configuration Modal -->
-<div class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-4" id="payment-modal">
-  <div class="bg-[#0f1015] border border-[#F5A623]/40 rounded-2xl p-6 sm:p-7 w-full max-w-md text-left shadow-2xl space-y-4">
-    <div class="flex items-center justify-between pb-3 border-b border-[#232530]">
-      <div class="flex items-center gap-2">
-        <span class="text-2xl">📋</span>
-        <div>
-          <h3 class="font-extrabold text-white text-base sm:text-lg">Order Created &amp; Details Saved</h3>
-          <p class="text-[11px] text-[#F5A623] font-mono" id="modal-order-id">ORD-VIP-XXXXX</p>
+<div class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3 sm:p-4" id="payment-modal">
+  <div class="bg-[#0f1015] border border-[#F5A623]/40 rounded-2xl p-4 sm:p-7 w-full max-w-md text-left shadow-2xl space-y-4 max-h-[92vh] overflow-y-auto">
+    <div class="flex items-center justify-between pb-3 border-b border-[#232530] gap-2">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="text-2xl flex-shrink-0">📋</span>
+        <div class="min-w-0">
+          <h3 class="font-extrabold text-white text-sm sm:text-lg leading-tight truncate">Order Created &amp; Saved</h3>
+          <p class="text-[11px] text-[#F5A623] font-mono truncate" id="modal-order-id">ORD-VIP-XXXXX</p>
         </div>
       </div>
-      <button class="text-gray-400 hover:text-white text-xl p-1" onclick="closePaymentModal()">&times;</button>
+      <button class="text-gray-400 hover:text-white text-2xl p-1 flex-shrink-0 leading-none" onclick="closePaymentModal()">&times;</button>
     </div>
 
     <!-- Details Box -->
     <div class="bg-[#161821] border border-[#272937] rounded-xl p-4 space-y-2 text-xs sm:text-sm">
       <div class="flex justify-between items-center text-gray-300">
         <span>Customer:</span>
-        <span class="font-bold text-white" id="modal-cust-name">Rahul Sharma</span>
+        <span class="font-bold text-white truncate ml-2" id="modal-cust-name">Rahul Sharma</span>
       </div>
       <div class="flex justify-between items-center text-gray-300">
         <span>VIP Number:</span>
@@ -629,13 +776,13 @@
       </div>
       <div class="flex justify-between items-center text-gray-300">
         <span>Payment Status:</span>
-        <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30">
+        <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30 flex-shrink-0">
           Pending Verification
         </span>
       </div>
       <div class="flex justify-between items-start text-gray-300 pt-1 border-t border-gray-800">
         <span class="shrink-0 mr-2">Delivery Address:</span>
-        <span class="font-medium text-gray-300 text-right text-[11px]" id="modal-delivery-address">402 Royal Tower, Mumbai</span>
+        <span class="font-medium text-gray-300 text-right text-[11px] break-words" id="modal-delivery-address">402 Royal Tower, Mumbai</span>
       </div>
     </div>
 
@@ -647,7 +794,7 @@
 
     <!-- Action Buttons -->
     <div class="space-y-2 pt-2">
-      <a class="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md" href="#" id="modal-concierge-btn" target="_blank">
+      <a class="w-full py-3 px-3 sm:px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md text-center" href="#" id="modal-concierge-btn" target="_blank">
         <span>💬 Complete Booking via WhatsApp Concierge</span>
       </a>
       <button class="w-full py-2.5 rounded-xl border border-gray-700 bg-neutral-900/80 hover:bg-neutral-800 text-gray-300 font-semibold text-xs tracking-wider transition-colors" onclick="closePaymentModal()">
@@ -897,31 +1044,44 @@
     }
     setInterval(updateTimer, 1000);
 
-    // 2. Payment Method Radio Selection Interaction
-    const methodCards = document.querySelectorAll('.method-card');
+    // 2. Payment Method Radio Selection Interaction (Synchronized across Desktop and Mobile)
+    function selectPaymentMethod(methodName) {
+      selectedMethod = methodName || 'UPI';
+      const allCards = document.querySelectorAll('.method-card');
 
+      allCards.forEach(card => {
+        const isSelected = (card.getAttribute('data-method') === selectedMethod);
+        const ind = card.querySelector('.radio-indicator');
+        if (isSelected) {
+          card.classList.add('active');
+          if (ind) {
+            ind.className = 'radio-indicator w-5 h-5 rounded-full border-2 border-[#F5A623] bg-[#F5A623] flex items-center justify-center flex-shrink-0 ml-1';
+            ind.innerHTML = `
+              <svg class="w-3 h-3 text-black stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            `;
+          }
+        } else {
+          card.classList.remove('active');
+          if (ind) {
+            ind.className = 'radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0 ml-1';
+            ind.innerHTML = '';
+          }
+        }
+      });
+    }
+
+    const methodCards = document.querySelectorAll('.method-card');
     methodCards.forEach(card => {
       card.addEventListener('click', () => {
-        // Deselect all
-        methodCards.forEach(c => {
-          c.classList.remove('active');
-          const ind = c.querySelector('.radio-indicator');
-          ind.className = 'radio-indicator w-5 h-5 rounded-full border-2 border-gray-600 flex items-center justify-center flex-shrink-0';
-          ind.innerHTML = '';
-        });
-
-        // Select clicked
-        card.classList.add('active');
-        selectedMethod = card.getAttribute('data-method') || 'UPI';
-        const activeInd = card.querySelector('.radio-indicator');
-        activeInd.className = 'radio-indicator w-5 h-5 rounded-full border-2 border-[#F5A623] bg-[#F5A623] flex items-center justify-center flex-shrink-0';
-        activeInd.innerHTML = `
-          <svg class="w-3 h-3 text-black stroke-[3]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        `;
+        const method = card.getAttribute('data-method') || 'UPI';
+        selectPaymentMethod(method);
       });
     });
+
+    // Synchronize initial default active method
+    selectPaymentMethod(selectedMethod);
 
     // 3. "Same as mobile number" Checkbox Sync
     const mobileInput = document.getElementById('cust-mobile');
