@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><title>NUMERA VIP — VIP Auctions & Concierge Sovereign Exchange</title><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-dim":"#e4d7d2","on-primary-fixed":"#400013","on-tertiary":"#ffffff","on-error":"#ffffff","on-primary-fixed-variant":"#881938","inverse-primary":"#ffb2bc","surface-tint":"#a8334e","on-secondary":"#ffffff","on-secondary-fixed-variant":"#574500","on-surface-variant":"#574144","surface-variant":"#ede0db","error":"#ba1a1a","on-primary":"#ffffff","background":"#fff8f6","outline":"#8a7173","surface-bright":"#fff8f6","surface-container-high":"#f2e6e0","primary-fixed-dim":"#ffb2bc","on-secondary-fixed":"#241a00","surface":"#fff8f6","on-background":"#201a17","inverse-on-surface":"#fbeee9","secondary":"#735c00","secondary-container":"#fed65b","inverse-surface":"#362f2c","primary":"#55001c","tertiary-fixed":"#a9f3c5","tertiary-fixed-dim":"#8ed6aa","secondary-fixed":"#ffe088","tertiary-container":"#00462a","on-error-container":"#93000a","surface-container-highest":"#ede0db","tertiary":"#002d19","primary-fixed":"#ffd9dd","on-secondary-container":"#745c00","on-primary-container":"#ff7f96","error-container":"#ffdad6","on-tertiary-fixed-variant":"#005232","surface-container-lowest":"#ffffff","on-tertiary-container":"#6fb68c","secondary-fixed-dim":"#e9c349","on-surface":"#201a17","surface-container":"#f8ebe6","on-tertiary-fixed":"#002111","surface-container-low":"#fef1eb","outline-variant":"#ddbfc2","primary-container":"#7a0c2e"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1.25rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-xl":"2.5rem",margin:"3rem",gutter:"1.5rem","space-md":"1rem"},fontFamily:{"numeral-hero":["Space Grotesk"],"body-lg":["Outfit"],"headline-sm":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"display-hero":["Playfair Display"],"title-md":["Outfit"],"numeral-hero-mobile":["Space Grotesk"],"headline-lg":["Playfair Display"],"title-lg":["Outfit"],"headline-md":["Playfair Display"],"body-sm":["Outfit"],"label-caps":["Space Grotesk"],"body-md":["Outfit"],"headline-lg-mobile":["Playfair Display"],"label-currency":["Space Grotesk"],"numeral-card":["Space Grotesk"]},fontSize:{"numeral-hero":["44px",{lineHeight:"52px",letterSpacing:"0.08em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-sm":["22px",{lineHeight:"30px",fontWeight:"600"}],"display-hero-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"700"}],"display-hero":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"700"}],"title-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"numeral-hero-mobile":["28px",{lineHeight:"36px",letterSpacing:"0.05em",fontWeight:"700"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-lg":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"label-caps":["11px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"36px",fontWeight:"600"}],"label-currency":["18px",{lineHeight:"24px",letterSpacing:"0.02em",fontWeight:"700"}],"numeral-card":["24px",{lineHeight:"32px",letterSpacing:"0.06em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_4px_24px_rgba(85,0,28,0.04)]"><div class="bg-surface-container-low/90 px-margin-mobile lg:px-margin py-1.5"><div class="max-w-[1360px] mx-auto flex flex-wrap items-center justify-between gap-y-1 text-on-surface-variant font-label-caps text-label-caps"><div class="flex items-center gap-space-md flex-wrap"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-tertiary-container">verified_user</span><span class="tracking-wider">DOT &amp; TRAI VERIFIED MARKETPLACE</span></div><span class="text-outline-variant hidden sm:inline">•</span><div class="flex items-center gap-space-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="tracking-wider">PAN INDIA 2-HR MNP FAST-PORTING ACTIVE</span></div></div><div class="flex items-center gap-space-md flex-wrap"><div class="hidden md:flex items-center gap-space-xs font-label-currency text-body-sm text-on-surface"><span class="text-on-surface-variant font-body-sm">24h Volume:</span><span class="font-numeral-card text-body-sm text-primary">₹4.82 Cr</span></div><span class="text-outline-variant hidden md:inline">•</span><div class="hidden lg:flex items-center gap-space-xs text-on-surface"><span class="text-tertiary-container font-label-caps text-label-caps">PORT SUCCESS: 99.94%</span></div><span class="text-outline-variant hidden lg:inline">•</span><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-2 py-0.5 rounded-full bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[13px] text-secondary">payments</span><span class="font-label-caps text-label-caps tracking-wider">₹ INR (Lakhs/Cr)</span></div><a class="flex items-center gap-space-xs text-primary font-label-caps text-label-caps hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[14px] text-secondary">support_agent</span><span>WHATSAPP CONCIERGE: +91 99999 00000</span></a></div></div></div></div><div class="h-20 max-w-[1360px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="marketplace-and-shubh-search" href="#"><img alt="NUMERA VIP Royal Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UcCmfn8brUz29HfW3n1zT5OoqNqz9gVlnipG8lQWiznfLg_-aJgX0K7xUrIGWbPM6EkzdmIgEc5H3NlHok3V1H6CyNX67sOIlS8hq-HJTvqBqEqpqXvchVfQKKHBHcyhIHOrYjSgvdnGonXm6-2wySP3K9sbeOGklD186JZRn-IHn2T-LlZa9lq0vtSNmMsJtZtQn3-7trA-4MFTvNhWaRUrrqOXBQ50x8USCy12fu"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary leading-none">NUMERA</span><span class="font-label-caps text-label-caps px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container uppercase tracking-widest">VIP</span></div><span class="font-label-caps text-[9px] tracking-[0.22em] text-secondary uppercase">Imperial Mobile Exchange</span></div></a></div><nav class="hidden xl:flex items-center gap-1 bg-surface-container-low p-1.5 rounded-full" data-active-classes="bg-primary-container text-on-primary font-title-md rounded-full shadow-[0_2px_12px_rgba(85,0,28,0.14)]"><a class="px-space-md py-2 rounded-full font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="marketplace-and-shubh-search" href="#">Marketplace &amp; Shubh Search</a><a class="px-space-md py-2 rounded-full font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="royal-spotlight-and-instant-mnp" href="#">Royal Spotlight &amp; Instant MNP</a><a class="px-space-md py-2 rounded-full font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="vip-auctions-and-concierge" href="#">VIP Auctions &amp; Concierge</a><a class="px-space-md py-2 rounded-full font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sell-and-valuation" href="#">Sell &amp; Valuation</a></nav><div class="flex items-center gap-space-sm"><div class="hidden sm:flex items-center bg-surface-container px-space-md py-2 rounded-full text-on-surface-variant gap-space-sm focus-within:ring-1 focus-within:ring-primary shadow-[0_1px_4px_rgba(85,0,28,0.03)]"><span class="material-symbols-outlined text-[18px] text-outline">search</span><input class="bg-transparent text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none w-44 md:w-56" placeholder="Search patterns (e.g. 0007, 99999)..." type="text"/><kbd class="font-label-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Ctrl+K</kbd></div><a class="flex items-center gap-space-xs px-space-md py-2.5 rounded-full bg-primary text-on-primary font-title-md text-body-md shadow-[0_4px_16px_rgba(85,0,28,0.22)] hover:bg-primary-container transition-all" data-path="vip-member-desk" href="#"><span class="material-symbols-outlined text-[18px] text-secondary-fixed">workspace_premium</span><span class="font-semibold tracking-wide">VIP Member Desk</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<div class="w-full bg-surface-container-low/60 py-space-md">
+<div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+<div class="flex flex-col sm:flex-row sm:items-center gap-x-2">
+<span class="font-label-caps text-label-caps tracking-wider text-primary font-bold uppercase">TRAI / DoT Master Registry Link Active</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Synchronized with National Telecom Registry Clock (IST) • Institutional HNW Access Only</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-on-surface">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container">verified_user</span>
+<span>ESCROW AGENT: ICICI BANK 5-TIER ESCROW</span>
+</div>
+<span class="font-label-caps text-[11px] text-secondary tracking-widest uppercase font-semibold hidden lg:inline">SESSION: HNW-IN-889104</span>
+</div>
+</div>
+</div>
+</div>
+<section class="w-full max-w-[1360px] mx-auto px-margin-mobile lg:px-margin pt-space-lg pb-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-lg">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-3">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+          High-Value Sealed &amp; Public Live Lots
+        </div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Sovereign Reserve Telephony Auctions</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+          Curated acquisition rounds for premier Indian corporate identifiers, royal octa sequences, and sacred cultural numerological vibrations.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-2 rounded-xl shadow-sm">
+<div class="px-4 py-2 text-center">
+<div class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Active Lots</div>
+<div class="font-numeral-card text-numeral-card text-primary font-bold">03 Live</div>
+</div>
+<div class="h-8 w-px bg-surface-variant"></div>
+<div class="px-4 py-2 text-center">
+<div class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Escrow Locked</div>
+<div class="font-numeral-card text-numeral-card text-secondary font-bold">₹1.95 Cr</div>
+</div>
+<div class="h-8 w-px bg-surface-variant"></div>
+<div class="px-4 py-2 text-center">
+<div class="font-label-caps text-[10px] text-outline uppercase tracking-wider">Clearance Protocol</div>
+<div class="font-label-caps text-label-caps text-tertiary-container font-bold pt-1">2-HR MNP</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px] text-secondary">workspace_premium</span>
+              LOT #01 • CROWN SOVEREIGN
+            </div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container text-tertiary-fixed font-label-caps text-[10px]">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+              ICICI Escrow Secured
+            </div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md mb-space-md">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Pan-India Roaming • Master Identifier</div>
+<div class="font-numeral-hero text-numeral-hero text-primary tracking-normal flex items-baseline flex-wrap">
+<span>+91</span>
+<span class="ml-2 text-primary-container">90000</span>
+<span class="mx-1.5 text-secondary">•</span>
+<span class="text-primary">00000</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-2 flex items-center gap-2">
+<span class="font-semibold text-primary">The Ultimate Deccan Sovereign</span>
+<span>(9 Octa-Zero Palindrome)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<div class="p-3 bg-surface-container rounded-lg">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase">Current High Bid</div>
+<div class="font-label-currency text-label-currency text-primary mt-0.5">₹1,15,00,000</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">(1.15 Crore INR)</div>
+</div>
+<div class="p-3 bg-surface-container rounded-lg">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase">Closing In</div>
+<div class="font-numeral-card text-[20px] text-error font-bold mt-0.5 flex items-center gap-1" id="timer-lot1">
+<span class="material-symbols-outlined text-[16px]">alarm</span>
+                03h 42m 18s
+              </div>
+<div class="font-body-sm text-[11px] text-tertiary-container font-semibold">Reserve Met • 24 Verified Bids</div>
+</div>
+</div>
+<div class="mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold">Masked Telephony Bid Desk</span>
+<span class="font-label-caps text-[10px] text-outline font-medium">Increment: +₹2,50,000</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 space-y-1.5 font-label-caps text-[11px]">
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1 text-primary font-bold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>VIP-MUM-44**</span>
+<span class="font-label-currency text-body-sm font-semibold">₹1,15,00,000</span>
+<span class="text-outline text-[10px]">2m ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>VIP-DEL-89**</span>
+<span class="font-label-currency text-body-sm">₹1,12,50,000</span>
+<span class="text-outline text-[10px]">18m ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>HNW-BLR-12**</span>
+<span class="font-label-currency text-body-sm">₹1,10,00,000</span>
+<span class="text-outline text-[10px]">1h ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex flex-col gap-2">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-secondary text-on-secondary font-title-md text-body-lg font-bold shadow-md hover:bg-secondary-container hover:text-on-secondary-container transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">pan_tool_alt</span>
+            Submit Sealed Counter-Bid (₹1,17,50,000)
+          </button>
+<div class="text-center font-body-sm text-[11px] text-outline">
+            Requires 5% Refundable ICICI Escrow Deposit (₹5,87,500)
+          </div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px] text-secondary">star</span>
+              LOT #02 • DELHI / NCR CIRCLE
+            </div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container text-tertiary-fixed font-label-caps text-[10px]">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+              ICICI Escrow Secured
+            </div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md mb-space-md">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Pre-Allocated 5G eSIM • Instant UPC</div>
+<div class="font-numeral-hero text-numeral-hero text-primary tracking-normal flex items-baseline flex-wrap">
+<span>+91</span>
+<span class="ml-2 text-primary">99999</span>
+<span class="mx-1.5 text-secondary">•</span>
+<span class="text-secondary">77777</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-2 flex items-center gap-2">
+<span class="font-semibold text-primary">The Royal Twin Pentas</span>
+<span>(Bhagyank Total: 8 • Saturn Alignment)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<div class="p-3 bg-surface-container rounded-lg">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase">Current High Bid</div>
+<div class="font-label-currency text-label-currency text-primary mt-0.5">₹48,50,000</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">(48.50 Lakh INR)</div>
+</div>
+<div class="p-3 bg-surface-container rounded-lg">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase">Closing In</div>
+<div class="font-numeral-card text-[20px] text-primary font-bold mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">hourglass_top</span>
+                1d 08h 15m
+              </div>
+<div class="font-body-sm text-[11px] text-tertiary-container font-semibold">Reserve Cleared • 17 Bids</div>
+</div>
+</div>
+<div class="mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold">Masked Telephony Bid Desk</span>
+<span class="font-label-caps text-[10px] text-outline font-medium">Increment: +₹1,00,000</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 space-y-1.5 font-label-caps text-[11px]">
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1 text-primary font-bold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>VIP-DEL-98**</span>
+<span class="font-label-currency text-body-sm font-semibold">₹48,50,000</span>
+<span class="text-outline text-[10px]">35m ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>CORP-GGN-01**</span>
+<span class="font-label-currency text-body-sm">₹47,50,000</span>
+<span class="text-outline text-[10px]">2h ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>VIP-PUN-55**</span>
+<span class="font-label-currency text-body-sm">₹46,50,000</span>
+<span class="text-outline text-[10px]">5h ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex flex-col gap-2">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-secondary text-on-secondary font-title-md text-body-lg font-bold shadow-md hover:bg-secondary-container hover:text-on-secondary-container transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">pan_tool_alt</span>
+            Submit Live Bid (₹49,50,000)
+          </button>
+<div class="text-center font-body-sm text-[11px] text-outline">
+            Instant Identity Verification via DigiLocker / Corporate Aadhaar
+          </div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between relative overflow-hidden transition-all duration-300 hover:shadow-xl">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px] text-secondary">military_tech</span>
+              LOT #03 • SACRED COLLECTION
+            </div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container text-tertiary-fixed font-label-caps text-[10px]">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+              ICICI Escrow Secured
+            </div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md mb-space-md">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Mumbai Circle • Ultra Auspicious</div>
+<div class="font-numeral-hero text-numeral-hero text-primary tracking-normal flex items-baseline flex-wrap">
+<span>+91</span>
+<span class="ml-2 text-primary-container">786786</span>
+<span class="mx-1.5 text-secondary">•</span>
+<span class="text-primary">7860</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-2 flex items-center gap-2">
+<span class="font-semibold text-primary">Sacred Triple 786 Sovereign</span>
+<span>(Shubh Shanti &amp; Barkat Series)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<div class="p-3 bg-surface-container rounded-lg">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase">Current High Bid</div>
+<div class="font-label-currency text-label-currency text-primary mt-0.5">₹32,00,000</div>
+<div class="font-body-sm text-[11px] text-on-surface-variant">(32.00 Lakh INR)</div>
+</div>
+<div class="p-3 bg-surface-container rounded-lg">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase">Closing In</div>
+<div class="font-numeral-card text-[20px] text-primary font-bold mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">update</span>
+                2d 14h 30m
+              </div>
+<div class="font-body-sm text-[11px] text-secondary font-semibold">Private Reserve Sealed</div>
+</div>
+</div>
+<div class="mb-space-md">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase tracking-wider font-semibold">Masked Telephony Bid Desk</span>
+<span class="font-label-caps text-[10px] text-outline font-medium">Increment: +₹1,00,000</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 space-y-1.5 font-label-caps text-[11px]">
+<div class="flex items-center justify-between text-on-surface">
+<span class="flex items-center gap-1 text-primary font-bold"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>VIP-HYD-77**</span>
+<span class="font-label-currency text-body-sm font-semibold">₹32,00,000</span>
+<span class="text-outline text-[10px]">1h ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>VIP-MUM-11**</span>
+<span class="font-label-currency text-body-sm">₹30,00,000</span>
+<span class="text-outline text-[10px]">4h ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>ENT-DXB-90**</span>
+<span class="font-label-currency text-body-sm">₹28,00,000</span>
+<span class="text-outline text-[10px]">8h ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex flex-col gap-2">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-secondary text-on-secondary font-title-md text-body-lg font-bold shadow-md hover:bg-secondary-container hover:text-on-secondary-container transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">pan_tool_alt</span>
+            Submit Live Bid (₹33,00,000)
+          </button>
+<div class="text-center font-body-sm text-[11px] text-outline">
+            Sealed Bid Disclosures subject to Seller Discretion
+          </div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full max-w-[1360px] mx-auto px-margin-mobile lg:px-margin py-space-xl">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-lg relative">
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md pb-space-lg border-b border-surface-variant/80">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-secondary font-label-caps text-label-caps uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+            Mandate Generator for Family Offices &amp; Enterprises
+          </div>
+<h2 class="font-headline-md text-headline-md text-primary">Bespoke Numerical Requisition Synthesizer</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Specify customized sequence architectures, numerology alignments, or luxury vehicle fleet matching parameters.
+          </p>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-lg bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
+<span>100% Guaranteed Telecom Portability SLA</span>
+</div>
+</div>
+<form class="mt-space-lg grid grid-cols-1 lg:grid-cols-12 gap-space-lg" onsubmit="event.preventDefault();">
+<div class="lg:col-span-8 space-y-space-lg">
+<div>
+<label class="block font-title-md text-title-md text-primary mb-3">1. Primary Circle &amp; Licensing Jurisdiction</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-space-sm" id="circle-selector">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="circle" type="radio" value="delhi"/>
+<div class="p-3 text-center rounded-xl bg-surface-container peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="block font-title-md text-body-md font-bold">Delhi NCR</span>
+<span class="block font-label-caps text-[10px] opacity-80 mt-0.5">North Hub</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="circle" type="radio" value="mumbai"/>
+<div class="p-3 text-center rounded-xl bg-surface-container peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="block font-title-md text-body-md font-bold">Mumbai</span>
+<span class="block font-label-caps text-[10px] opacity-80 mt-0.5">Financial Hub</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="circle" type="radio" value="karnataka"/>
+<div class="p-3 text-center rounded-xl bg-surface-container peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="block font-title-md text-body-md font-bold">Karnataka</span>
+<span class="block font-label-caps text-[10px] opacity-80 mt-0.5">Bengaluru Hub</span>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="circle" type="radio" value="punjab"/>
+<div class="p-3 text-center rounded-xl bg-surface-container peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="block font-title-md text-body-md font-bold">Punjab</span>
+<span class="block font-label-caps text-[10px] opacity-80 mt-0.5">Royalty Hub</span>
+</div>
+</label>
+<label class="cursor-pointer col-span-2 sm:col-span-1">
+<input class="peer sr-only" name="circle" type="radio" value="allindia"/>
+<div class="p-3 text-center rounded-xl bg-surface-container peer-checked:bg-primary peer-checked:text-on-primary transition-all">
+<span class="block font-title-md text-body-md font-bold">All-India</span>
+<span class="block font-label-caps text-[10px] opacity-80 mt-0.5">Pan Roam Free</span>
+</div>
+</label>
+</div>
+</div>
+<div>
+<label class="block font-title-md text-title-md text-primary mb-3">2. Desired Sequence Pattern &amp; Numerical Symmetry</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-2">
+<div class="flex items-center gap-1.5 text-secondary font-label-caps text-label-caps font-bold">
+<span class="material-symbols-outlined text-[16px]">pattern</span>
+                  Exact Suffix Pattern
+                </div>
+<input class="w-full bg-surface-container-lowest p-2.5 rounded-lg text-on-surface font-numeral-card text-body-md placeholder:text-outline focus:outline-none shadow-sm" placeholder="e.g. *9999*, *0007*, *11111*" type="text"/>
+<span class="block font-body-sm text-[11px] text-on-surface-variant">Hexa, Septa, Mirror or Consecutive Triplets</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-2">
+<div class="flex items-center gap-1.5 text-secondary font-label-caps text-label-caps font-bold">
+<span class="material-symbols-outlined text-[16px]">self_improvement</span>
+                  Bhagyank (Destiny Total)
+                </div>
+<select class="w-full bg-surface-container-lowest p-2.5 rounded-lg text-on-surface font-title-md text-body-md focus:outline-none shadow-sm cursor-pointer">
+<option>Total: 1 (Sun • Sovereignty &amp; Leadership)</option>
+<option>Total: 3 (Jupiter • Wisdom &amp; Expansion)</option>
+<option>Total: 5 (Mercury • Commerce &amp; Communication)</option>
+<option>Total: 6 (Venus • Luxury &amp; Prosperity)</option>
+<option>Total: 8 (Saturn • Infinite Power &amp; Legacy)</option>
+<option selected="">Total: 9 (Mars • Royal Command &amp; Protection)</option>
+</select>
+<span class="block font-body-sm text-[11px] text-on-surface-variant">Vedic Numerology single-digit vibration</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-2">
+<div class="flex items-center gap-1.5 text-secondary font-label-caps text-label-caps font-bold">
+<span class="material-symbols-outlined text-[16px]">directions_car</span>
+                  Fleet / Car Plate Match
+                </div>
+<input class="w-full bg-surface-container-lowest p-2.5 rounded-lg text-on-surface font-numeral-card text-body-md placeholder:text-outline focus:outline-none shadow-sm" placeholder="e.g. 0001, 9999, 0007" type="text"/>
+<span class="block font-body-sm text-[11px] text-on-surface-variant">Match your Rolls-Royce, Bentley or Maybach plate</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block font-title-md text-title-md text-primary mb-3">3. Capital Allocation Tier (INR)</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="tier" type="radio" value="tier1"/>
+<div class="p-space-md rounded-xl bg-surface-container peer-checked:bg-primary-container peer-checked:text-on-primary transition-all">
+<div class="font-label-caps text-label-caps uppercase tracking-wider">Executive Sovereign</div>
+<div class="font-label-currency text-label-currency mt-1">₹2 Lakh – ₹10 Lakh</div>
+<p class="font-body-sm text-[12px] opacity-80 mt-1.5">Penta suffixes, royal double mirrors, life-path birth totals.</p>
+</div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="tier" type="radio" value="tier2"/>
+<div class="p-space-md rounded-xl bg-surface-container peer-checked:bg-primary-container peer-checked:text-on-primary transition-all">
+<div class="font-label-caps text-label-caps uppercase tracking-wider">Prestige Enterprise</div>
+<div class="font-label-currency text-label-currency mt-1">₹10 Lakh – ₹50 Lakh</div>
+<p class="font-body-sm text-[12px] opacity-80 mt-1.5">Hexa sequences, 786 combinations, corporate master series.</p>
+</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="tier" type="radio" value="tier3"/>
+<div class="p-space-md rounded-xl bg-surface-container peer-checked:bg-primary-container peer-checked:text-on-primary transition-all">
+<div class="font-label-caps text-label-caps uppercase tracking-wider">Sovereign Apex</div>
+<div class="font-label-currency text-label-currency mt-1">₹50 Lakh – ₹2 Cr+</div>
+<p class="font-body-sm text-[12px] opacity-80 mt-1.5">Octa zeroes, 99999 99999 unreleased blocks, sealed vault access.</p>
+</div>
+</label>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-primary font-title-md text-title-md mb-3">
+<span class="material-symbols-outlined text-secondary">security</span>
+              Sovereign Protocol NDA
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+              All mandates are processed through air-gapped terminal networks. Carrier personnel and allocation directors are bound by bilateral secrecy undertakings.
+            </p>
+<div class="space-y-3 mb-space-lg">
+<label class="flex items-start gap-2.5 cursor-pointer">
+<input checked="" class="mt-1 accent-primary rounded w-4 h-4" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Require Bilateral Non-Disclosure Agreement (NDA) &amp; Private Carrier Clearing</span>
+</label>
+<label class="flex items-start gap-2.5 cursor-pointer">
+<input checked="" class="mt-1 accent-primary rounded w-4 h-4" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Deliver Physical Ceramic eSIM via Armed Vault Courier in Metro Circle</span>
+</label>
+</div>
+<div class="p-3 bg-surface-container rounded-lg mb-space-lg">
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase">Desk Turnaround Time</div>
+<div class="font-title-md text-body-lg text-primary font-bold">Within 45 Minutes</div>
+<div class="font-body-sm text-[11px] text-tertiary-container">Assigned Dedicated Portfolio Director</div>
+</div>
+</div>
+<div class="space-y-2">
+<button class="w-full py-4 px-space-md rounded-xl bg-primary text-on-primary font-title-md text-body-lg font-bold shadow-lg hover:bg-primary-container transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">send_time_extension</span>
+              Dispatch Requisition to Sovereign Desk
+            </button>
+<div class="text-center font-body-sm text-[11px] text-outline">
+              Regulated under Section 4 of TRAI Number Portability Act 2011
+            </div>
+</div>
+</div>
+</form>
+</div>
+</section>
+<section class="w-full max-w-[1360px] mx-auto px-margin-mobile lg:px-margin pb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-md flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-md border-b border-surface-variant/80">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-20 h-20 rounded-full object-cover shadow-sm" data-alt="Refined professional portrait of Vikramaditya Singhania, Managing Director of Private Telecom Allocations, dressed in a bespoke charcoal Nehru jacket with a subtle gold lapel pin, warm ivory studio lighting, modern boardroom background with subtle Makrana marble accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApvDuxPV1lRBSjRtjFcqalBczfynyhYqM97qYVNhxcKp5XCBGHuqxXnHVizbSQvQwIwBXfWmOzl1VBzEmLS6pPNS6ELwKmocnaUZUQGscE5yhf58yfu0vpEg8Q_kERaMT-mHJvxAq8NwTXh1mMS-Bd9F1ixfrH-LogAhIIL2y1UDzq1BnGUyrn6kUnLRO9ZURyc3sd0ABNTpmYVYLCM1mmQU4abFJuCPf5o5UNQ-4"/>
+<span class="absolute bottom-0 right-0 w-5 h-5 rounded-full bg-tertiary-container border-2 border-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary-fixed text-[12px]">verified</span>
+</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-primary">Vikramaditya Singhania</h3>
+<p class="font-body-sm text-body-sm text-secondary font-medium">Managing Director of Private Telecom Allocations</p>
+<div class="flex items-center gap-2 font-label-caps text-[10px] text-outline mt-1">
+<span>EX-TRAI ADVISORY COMMITTEE</span>
+<span>•</span>
+<span>14 YRS SOVEREIGN BROKERAGE</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed/40 text-on-tertiary-fixed font-label-caps text-[11px] self-start sm:self-auto font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+              ON DESK: AVAILABLE
+            </span>
+</div>
+<div class="py-space-md">
+<h4 class="font-title-md text-body-lg text-primary mb-2">Private Client Telephony Office</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              “We manage white-glove bilateral allocations for the country’s leading industrial houses, unicorn founders, and parliamentary leaders. Every transaction is executed under absolute banking confidentiality, backed by irrevocable ICICI sovereign escrow.”
+            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-sm">
+<div class="p-3 bg-surface-container rounded-lg flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">location_on</span>
+<div>
+<div class="font-label-caps text-[10px] text-outline uppercase">Private Lounge</div>
+<div class="font-title-md text-[13px] text-primary">Nariman Point, Mumbai</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container rounded-lg flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">location_on</span>
+<div>
+<div class="font-label-caps text-[10px] text-outline uppercase">Northern Desk</div>
+<div class="font-title-md text-[13px] text-primary">Barakhamba Rd, New Delhi</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container rounded-lg flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">timer</span>
+<div>
+<div class="font-label-caps text-[10px] text-outline uppercase">Escrow Settlement</div>
+<div class="font-title-md text-[13px] text-primary">T+0 Real-Time MNP</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-lg flex flex-wrap items-center gap-space-sm">
+<a class="px-space-md py-3 rounded-xl bg-tertiary text-on-tertiary font-title-md text-body-md flex items-center gap-2 shadow-sm hover:bg-tertiary-container transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+            Direct Encrypted WhatsApp: +91 99999 00000
+          </a>
+<button class="px-space-md py-3 rounded-xl bg-surface-container text-on-surface font-title-md text-body-md hover:bg-surface-container-high transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">videocam</span>
+            Schedule Private Video Appointment
+          </button>
+</div>
+</div>
+<div class="lg:col-span-5 bg-surface-container-low rounded-xl p-space-lg shadow-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-variant/80">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">history_edu</span>
+<h4 class="font-title-md text-title-md text-primary">Recent Transacted Lots</h4>
+</div>
+<span class="font-label-caps text-[10px] text-tertiary-container font-bold uppercase">All Settled &amp; Ported</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant my-space-sm">
+            Audited register of recent closed sealed-bid settlements through NUMERA Escrow Desks.
+          </p>
+<div class="space-y-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-[10px] text-outline uppercase">Settled on 14 Feb 2025</span>
+<span class="font-label-caps text-[10px] px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">OCTA EIGHT</span>
+</div>
+<div class="font-numeral-card text-numeral-card text-primary font-bold">
+                +91 98888 88888
+              </div>
+<div class="flex items-center justify-between mt-2 pt-2 border-t border-surface-variant/50">
+<div class="font-body-sm text-[12px] text-on-surface-variant">Bangalore Unicorn Founder</div>
+<div class="font-label-currency text-label-currency text-secondary">₹82,00,000</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-[10px] text-outline uppercase">Settled on 29 Jan 2025</span>
+<span class="font-label-caps text-[10px] px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold">HEPTA SEVEN</span>
+</div>
+<div class="font-numeral-card text-numeral-card text-primary font-bold">
+                +91 97777 77777
+              </div>
+<div class="flex items-center justify-between mt-2 pt-2 border-t border-surface-variant/50">
+<div class="font-body-sm text-[12px] text-on-surface-variant">Mumbai Real Estate Conglomerate</div>
+<div class="font-label-currency text-label-currency text-secondary">₹64,00,000</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-caps text-[10px] text-outline uppercase">Settled on 12 Jan 2025</span>
+<span class="font-label-caps text-[10px] px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold">ROYAL 0001</span>
+</div>
+<div class="font-numeral-card text-numeral-card text-primary font-bold">
+                +91 90000 00001
+              </div>
+<div class="flex items-center justify-between mt-2 pt-2 border-t border-surface-variant/50">
+<div class="font-body-sm text-[12px] text-on-surface-variant">NCR Automotive Industrialist</div>
+<div class="font-label-currency text-label-currency text-secondary">₹51,00,000</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-label-caps text-[11px]">
+<span>TOTAL HISTORIC EXCHANGE VOLUME: ₹148.6 CR</span>
+<span class="text-tertiary-container font-bold">ZERO DEFAULT RECORD</span>
+</div>
+</div>
+</div>
+</section>
+<script>
+    (function initAuctionCountdown() {
+      let seconds = 3 * 3600 + 42 * 60 + 18;
+      const timerEl = document.getElementById('timer-lot1');
+      if (!timerEl) return;
+      setInterval(() => {
+        if (seconds > 0) {
+          seconds--;
+          const h = Math.floor(seconds / 3600);
+          const m = Math.floor((seconds % 3600) / 60);
+          const s = seconds % 60;
+          timerEl.innerHTML = `<span class="material-symbols-outlined text-[16px]">alarm</span> ${String(h).padStart(2, '0')}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`;
+        }
+      }, 1000);
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_-4px_24px_rgba(85,0,28,0.03)] mt-space-xl"><div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_2px_16px_rgba(85,0,28,0.04)] mb-space-xl"><div class="flex flex-col md:flex-row items-center justify-between gap-space-md pb-space-lg mb-space-lg"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center"><span class="material-symbols-outlined text-tertiary-fixed text-[22px]">verified</span></div><div><h4 class="font-title-lg text-title-lg text-primary">Official Telecom Carrier Gateway</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Direct integration with all Tier-1 licensed Indian telecom network operators for instant Unique Porting Code (UPC) clearance</p></div></div><div class="flex items-center gap-space-md flex-wrap justify-center"><div class="px-space-md py-2 rounded-lg bg-surface-container flex items-center gap-space-xs"><span class="font-label-caps text-label-caps font-bold text-primary">JIO TRUE 5G</span></div><div class="px-space-md py-2 rounded-lg bg-surface-container flex items-center gap-space-xs"><span class="font-label-caps text-label-caps font-bold text-primary">AIRTEL 5G PLUS</span></div><div class="px-space-md py-2 rounded-lg bg-surface-container flex items-center gap-space-xs"><span class="font-label-caps text-label-caps font-bold text-primary">VODAFONE IDEA (Vi)</span></div><div class="px-space-md py-2 rounded-lg bg-surface-container flex items-center gap-space-xs"><span class="font-label-caps text-label-caps font-bold text-primary">BSNL 4G ENTERPRISE</span></div></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-md"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-[24px]">gavel</span><div><h5 class="font-title-md text-title-md text-on-surface">100% TRAI &amp; DoT Sovereign Escrow</h5><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Every transaction is backed by irrevocable institutional escrow accounts. Payments are disbursed only upon verified MNP completion.</p></div></div><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-[24px]">lock_clock</span><div><h5 class="font-title-md text-title-md text-on-surface">2-Hour Nationwide Port Protocol</h5><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Seamless, non-disruptive migration without network downtime. Full SIM delivery and white-glove doorstep verification.</p></div></div><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-secondary text-[24px]">room_service</span><div><h5 class="font-title-md text-title-md text-on-surface">Private Telephony Concierge Desks</h5><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Dedicated wealth managers stationed at Sovereign Exchanges in Nariman Point (Mumbai) and Barakhamba Road (New Delhi).</p></div></div></div></div><div class="flex flex-col md:flex-row items-center justify-between gap-space-md pt-space-lg text-on-surface-variant font-body-sm text-body-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-primary font-bold">NUMERA VIP</span><span class="text-outline-variant">•</span><span>© 2025 NUMERA VIP India Limited. All Rights Reserved.</span></div><div class="flex items-center gap-space-md font-label-caps text-label-caps"><a class="hover:text-primary transition-colors" data-path="marketplace-and-shubh-search" href="#">TERMS OF EXCHANGE</a><a class="hover:text-primary transition-colors" data-path="marketplace-and-shubh-search" href="#">ESCROW CHARTER</a><a class="hover:text-primary transition-colors" data-path="marketplace-and-shubh-search" href="#">DOT / TRAI COMPLIANCE</a><a class="hover:text-primary transition-colors" data-path="marketplace-and-shubh-search" href="#">PRIVACY PROTOCOL</a></div></div></div></footer>
+<script>
+  (function() {
+    const routes = {
+      "marketplace-and-shubh-search": "/",
+      "royal-spotlight-and-instant-mnp": "/royal-spotlight-and-instant-mnp/",
+      "vip-auctions-and-concierge": "/vip-auctions-and-concierge/",
+      "sell-and-valuation": "/sell-and-valuation/",
+      "vip-member-desk": "/vip-auctions-and-concierge/"
+    };
+
+    function setupNav() {
+      const rawPath = window.location.pathname.replace(/\/index\.html$/, "").replace(/\/$/, "");
+      const path = rawPath || "/";
+      
+      document.querySelectorAll("a[data-path]").forEach(link => {
+        const target = link.getAttribute("data-path");
+        if (routes[target]) {
+          link.setAttribute("href", routes[target]);
+        }
+      });
+
+      const nav = document.querySelector("nav[data-active-classes]");
+      if (nav) {
+        const activeClasses = (nav.getAttribute("data-active-classes") || "").trim().split(/\s+/);
+        const inactiveClasses = ["text-on-surface-variant", "font-body-md"];
+        
+        nav.querySelectorAll("a[data-path]").forEach(link => {
+          const target = link.getAttribute("data-path");
+          const targetUrl = routes[target];
+          const isHome = (path === "/" || path === "/marketplace-and-shubh-search" || path.includes("marketplace")) && target === "marketplace-and-shubh-search";
+          const isMatch = isHome || (targetUrl && (path.includes(target) || path.replace(/_/g, "-").includes(target)));
+
+          if (isMatch) {
+            inactiveClasses.forEach(c => link.classList.remove(c));
+            activeClasses.forEach(c => link.classList.add(c));
+            link.setAttribute("aria-current", "page");
+          }
+        });
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupNav);
+    } else {
+      setupNav();
+    }
+  })();
+</script>
+</body></html>
