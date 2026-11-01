@@ -5563,19 +5563,11 @@
 
     // Modal Interaction Simulations
     function handleEnquire(number, optPrice) {
-      // Resolve price from argument or DOM card if available
-      const cleanNum = String(number).replace(/\s+/g, '');
-      let price = optPrice || '';
-      if (!price) {
-        const card = document.querySelector(`.number-card[data-number="${cleanNum}"]`);
-        if (card) {
-          price = card.getAttribute('data-price') || '';
-        }
-      }
-      const priceText = price ? ` (Price: ₹${Number(price).toLocaleString('en-IN')})` : '';
-      const msg = `Hello VIP Number Club, I am interested in VIP number ${number}${priceText}. Please share more details and the booking process.`;
-      const waUrl = `https://wa.me/917439478793?text=${encodeURIComponent(msg)}`;
-      window.open(waUrl, '_blank');
+      showModal(
+        "Enquiry Support",
+        "WhatsApp enquiry is temporarily offline while we update our concierge helpline. For instant booking, please use 'Buy Now' to reserve your number through secure checkout.",
+        "ℹ"
+      );
     }
 
     function handleBuyNow(number, price, origPrice, category) {
