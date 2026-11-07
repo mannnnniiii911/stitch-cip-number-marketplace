@@ -1,0 +1,1797 @@
+[
+  {
+    "number": "9000000000",
+    "price": 25000,
+    "originalPrice": 40000,
+    "category": "Hexa Numbers",
+    "tag": "hexa",
+    "seconds": 6320,
+    "tags": [
+      "all",
+      "0000-ending",
+      "hexa",
+      "9-series",
+      "0000"
+    ]
+  },
+  {
+    "number": "9880000000",
+    "price": 16000,
+    "originalPrice": 30000,
+    "category": "Hexa Numbers",
+    "tag": "hexa",
+    "seconds": 8110,
+    "tags": [
+      "all",
+      "0000-ending",
+      "hexa",
+      "9-series",
+      "0000"
+    ]
+  },
+  {
+    "number": "7010106666",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 16325,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010107777",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 3522,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010110000",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 11367,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "70101",
+      "70101-repeating",
+      "0000"
+    ]
+  },
+  {
+    "number": "7010111100",
+    "price": 8800,
+    "originalPrice": 13500,
+    "category": "70101 Series \u2014 Mixed Repeating Numbers",
+    "tag": "70101-mixed",
+    "seconds": 19367,
+    "tags": [
+      "all",
+      "7-series",
+      "70101-mixed",
+      "70101"
+    ]
+  },
+  {
+    "number": "7010111222",
+    "price": 11000,
+    "originalPrice": 16000,
+    "category": "Mirror Numbers",
+    "tag": "mirror",
+    "seconds": 4472,
+    "tags": [
+      "all",
+      "7-series",
+      "mirror",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010111133",
+    "price": 8800,
+    "originalPrice": 13500,
+    "category": "70101 Series \u2014 Mixed Repeating Numbers",
+    "tag": "70101-mixed",
+    "seconds": 9918,
+    "tags": [
+      "all",
+      "7-series",
+      "70101-mixed",
+      "70101"
+    ]
+  },
+  {
+    "number": "7010116666",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 12644,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010117777",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 7128,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010118888",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 15495,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010119999",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 2915,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "9-series",
+      "70101-repeating",
+      "triple9"
+    ]
+  },
+  {
+    "number": "7010120000",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 18240,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "70101",
+      "70101-repeating",
+      "0000"
+    ]
+  },
+  {
+    "number": "7010121111",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 10332,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010184444",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 5954,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010185555",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 13532,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010101111",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 6448,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010102222",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 3619,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010104444",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 11812,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010105555",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 10824,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010112222",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 10114,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010113333",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 7372,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010114444",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 6158,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010115555",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 5648,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010123333",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 16625,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010124444",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 3841,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010125555",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 3776,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010126666",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 5870,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010127777",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 9964,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010128888",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 10423,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010129999",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 3669,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "9-series",
+      "70101-repeating",
+      "triple9"
+    ]
+  },
+  {
+    "number": "7010130000",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 9315,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "70101",
+      "70101-repeating",
+      "0000"
+    ]
+  },
+  {
+    "number": "7010131111",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 16546,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010132222",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 10023,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010134444",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 17519,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010135555",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 11915,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010136666",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 3012,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010137777",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 8031,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010138888",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 16648,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010139999",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 13949,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "9-series",
+      "70101-repeating",
+      "triple9"
+    ]
+  },
+  {
+    "number": "7010140000",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 11905,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "70101",
+      "70101-repeating",
+      "0000"
+    ]
+  },
+  {
+    "number": "7010141111",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 7894,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010142222",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 9855,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010143333",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 13829,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010145555",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 6149,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010146666",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 5839,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010147777",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 15249,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010148888",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 5969,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010149999",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 14563,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "9-series",
+      "70101-repeating",
+      "triple9"
+    ]
+  },
+  {
+    "number": "7010150000",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 14070,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "70101",
+      "70101-repeating",
+      "0000"
+    ]
+  },
+  {
+    "number": "7010151111",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 11467,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010152222",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 4223,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010153333",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 17854,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010154444",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 6890,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010156666",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 15203,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010157777",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 5382,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010158888",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 12406,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010159999",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 14650,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "9-series",
+      "70101-repeating",
+      "triple9"
+    ]
+  },
+  {
+    "number": "7010160000",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 9100,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "70101",
+      "70101-repeating",
+      "0000"
+    ]
+  },
+  {
+    "number": "7010161111",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 5079,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010162222",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 4301,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010163333",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 10267,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010164444",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 12282,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010165555",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 5414,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010167777",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 10428,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010168888",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 6109,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010169999",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 15255,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "9-series",
+      "70101-repeating",
+      "triple9"
+    ]
+  },
+  {
+    "number": "7010170000",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 11908,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "70101",
+      "70101-repeating",
+      "0000"
+    ]
+  },
+  {
+    "number": "7010171111",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 17657,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010172222",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 14754,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010173333",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 8129,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010174444",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 14930,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010175555",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 14441,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010176666",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 9665,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010178888",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 11548,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010179999",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 5139,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "9-series",
+      "70101-repeating",
+      "triple9"
+    ]
+  },
+  {
+    "number": "7010180000",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 8407,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "70101",
+      "70101-repeating",
+      "0000"
+    ]
+  },
+  {
+    "number": "7010181111",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 10821,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010182222",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 8154,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010183333",
+    "price": 12250,
+    "originalPrice": 18000,
+    "category": "70101 Series \u2014 Repeating Numbers",
+    "tag": "70101-repeating",
+    "seconds": 17947,
+    "tags": [
+      "all",
+      "7-series",
+      "70101",
+      "70101-repeating"
+    ]
+  },
+  {
+    "number": "7010111122",
+    "price": 8800,
+    "originalPrice": 13500,
+    "category": "70101 Series \u2014 Mixed Repeating Numbers",
+    "tag": "70101-mixed",
+    "seconds": 15233,
+    "tags": [
+      "all",
+      "7-series",
+      "70101-mixed",
+      "70101"
+    ]
+  },
+  {
+    "number": "7010111144",
+    "price": 8800,
+    "originalPrice": 13500,
+    "category": "70101 Series \u2014 Mixed Repeating Numbers",
+    "tag": "70101-mixed",
+    "seconds": 11645,
+    "tags": [
+      "all",
+      "7-series",
+      "70101-mixed",
+      "70101"
+    ]
+  },
+  {
+    "number": "7010111155",
+    "price": 8800,
+    "originalPrice": 13500,
+    "category": "70101 Series \u2014 Mixed Repeating Numbers",
+    "tag": "70101-mixed",
+    "seconds": 9996,
+    "tags": [
+      "all",
+      "7-series",
+      "70101-mixed",
+      "70101"
+    ]
+  },
+  {
+    "number": "7010111166",
+    "price": 8800,
+    "originalPrice": 13500,
+    "category": "70101 Series \u2014 Mixed Repeating Numbers",
+    "tag": "70101-mixed",
+    "seconds": 13426,
+    "tags": [
+      "all",
+      "7-series",
+      "70101-mixed",
+      "70101"
+    ]
+  },
+  {
+    "number": "7010111177",
+    "price": 8800,
+    "originalPrice": 13500,
+    "category": "70101 Series \u2014 Mixed Repeating Numbers",
+    "tag": "70101-mixed",
+    "seconds": 4632,
+    "tags": [
+      "all",
+      "7-series",
+      "70101-mixed",
+      "70101"
+    ]
+  },
+  {
+    "number": "7010111188",
+    "price": 8800,
+    "originalPrice": 13500,
+    "category": "70101 Series \u2014 Mixed Repeating Numbers",
+    "tag": "70101-mixed",
+    "seconds": 10305,
+    "tags": [
+      "all",
+      "7-series",
+      "70101-mixed",
+      "70101"
+    ]
+  },
+  {
+    "number": "7010111199",
+    "price": 8800,
+    "originalPrice": 13500,
+    "category": "70101 Series \u2014 Mixed Repeating Numbers",
+    "tag": "70101-mixed",
+    "seconds": 3851,
+    "tags": [
+      "all",
+      "7-series",
+      "70101-mixed",
+      "70101"
+    ]
+  },
+  {
+    "number": "9999999995",
+    "price": 11500,
+    "originalPrice": 18000,
+    "category": "9 Series Numbers",
+    "tag": "9-series",
+    "seconds": 13136,
+    "tags": [
+      "all",
+      "9-series",
+      "triple9"
+    ]
+  },
+  {
+    "number": "9999999996",
+    "price": 11500,
+    "originalPrice": 18000,
+    "category": "9 Series Numbers",
+    "tag": "9-series",
+    "seconds": 15945,
+    "tags": [
+      "all",
+      "9-series",
+      "triple9"
+    ]
+  },
+  {
+    "number": "9999999997",
+    "price": 11500,
+    "originalPrice": 18000,
+    "category": "9 Series Numbers",
+    "tag": "9-series",
+    "seconds": 11573,
+    "tags": [
+      "all",
+      "9-series",
+      "triple9"
+    ]
+  },
+  {
+    "number": "9999999998",
+    "price": 11500,
+    "originalPrice": 18000,
+    "category": "9 Series Numbers",
+    "tag": "9-series",
+    "seconds": 4968,
+    "tags": [
+      "all",
+      "9-series",
+      "triple9"
+    ]
+  },
+  {
+    "number": "9123000002",
+    "price": 8300,
+    "originalPrice": 12500,
+    "category": "9 Series VIP Numbers",
+    "tag": "9-series-vip",
+    "seconds": 9713,
+    "tags": [
+      "all",
+      "0000-ending",
+      "vip",
+      "9-series",
+      "9-series-vip",
+      "0000"
+    ]
+  },
+  {
+    "number": "9123000007",
+    "price": 8300,
+    "originalPrice": 12500,
+    "category": "9 Series VIP Numbers",
+    "tag": "9-series-vip",
+    "seconds": 13111,
+    "tags": [
+      "all",
+      "0000-ending",
+      "vip",
+      "9-series",
+      "9-series-vip",
+      "0000"
+    ]
+  },
+  {
+    "number": "9123000008",
+    "price": 8300,
+    "originalPrice": 12500,
+    "category": "9 Series VIP Numbers",
+    "tag": "9-series-vip",
+    "seconds": 9767,
+    "tags": [
+      "all",
+      "0000-ending",
+      "vip",
+      "9-series",
+      "9-series-vip",
+      "0000"
+    ]
+  },
+  {
+    "number": "9512395123",
+    "price": 6000,
+    "originalPrice": 9500,
+    "category": "9 Series VIP Numbers",
+    "tag": "9-series-vip",
+    "seconds": 19158,
+    "tags": [
+      "all",
+      "9-series-vip",
+      "vip",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9292879292",
+    "price": 5500,
+    "originalPrice": 8500,
+    "category": "9 Series VIP Numbers",
+    "tag": "9-series-vip",
+    "seconds": 15764,
+    "tags": [
+      "all",
+      "9-series-vip",
+      "vip",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9999966666",
+    "price": 11500,
+    "originalPrice": 18000,
+    "category": "9 Series Penta Numbers",
+    "tag": "9-series-penta",
+    "seconds": 17835,
+    "tags": [
+      "all",
+      "9-series-penta",
+      "penta",
+      "9-series",
+      "triple9"
+    ]
+  },
+  {
+    "number": "9999977777",
+    "price": 11500,
+    "originalPrice": 18000,
+    "category": "9 Series Penta Numbers",
+    "tag": "9-series-penta",
+    "seconds": 7481,
+    "tags": [
+      "all",
+      "9-series-penta",
+      "penta",
+      "9-series",
+      "triple9"
+    ]
+  },
+  {
+    "number": "8808888088",
+    "price": 11500,
+    "originalPrice": 18000,
+    "category": "8 Series Numbers",
+    "tag": "8-series",
+    "seconds": 11479,
+    "tags": [
+      "all",
+      "8-series"
+    ]
+  },
+  {
+    "number": "8888588885",
+    "price": 11500,
+    "originalPrice": 18000,
+    "category": "8 Series Numbers",
+    "tag": "8-series",
+    "seconds": 7375,
+    "tags": [
+      "all",
+      "8-series"
+    ]
+  },
+  {
+    "number": "8988889888",
+    "price": 11000,
+    "originalPrice": 17000,
+    "category": "8 Series Numbers",
+    "tag": "8-series",
+    "seconds": 10881,
+    "tags": [
+      "all",
+      "8-series"
+    ]
+  },
+  {
+    "number": "8888878888",
+    "price": 11000,
+    "originalPrice": 17000,
+    "category": "8 Series Numbers",
+    "tag": "8-series",
+    "seconds": 11409,
+    "tags": [
+      "all",
+      "8-series"
+    ]
+  },
+  {
+    "number": "7777755555",
+    "price": 8800,
+    "originalPrice": 14000,
+    "category": "Penta Series",
+    "tag": "penta-series",
+    "seconds": 16838,
+    "tags": [
+      "all",
+      "7-series",
+      "penta-series",
+      "penta"
+    ]
+  },
+  {
+    "number": "6666655555",
+    "price": 8800,
+    "originalPrice": 14000,
+    "category": "Penta Series",
+    "tag": "penta-series",
+    "seconds": 15887,
+    "tags": [
+      "all",
+      "penta-series",
+      "6-series",
+      "penta"
+    ]
+  },
+  {
+    "number": "7805555555",
+    "price": 7500,
+    "originalPrice": 12000,
+    "category": "VIP 5 Series 5",
+    "tag": "vip-5-series",
+    "seconds": 14661,
+    "tags": [
+      "all",
+      "7-series",
+      "vip",
+      "vip-5-series",
+      "penta",
+      "hexa"
+    ]
+  },
+  {
+    "number": "7085555555",
+    "price": 7500,
+    "originalPrice": 12000,
+    "category": "VIP 5 Series 5",
+    "tag": "vip-5-series",
+    "seconds": 9986,
+    "tags": [
+      "all",
+      "7-series",
+      "vip",
+      "vip-5-series",
+      "penta",
+      "hexa"
+    ]
+  },
+  {
+    "number": "7205555555",
+    "price": 7500,
+    "originalPrice": 12000,
+    "category": "VIP 5 Series 5",
+    "tag": "vip-5-series",
+    "seconds": 7332,
+    "tags": [
+      "all",
+      "7-series",
+      "vip",
+      "vip-5-series",
+      "penta",
+      "hexa"
+    ]
+  },
+  {
+    "number": "6222555555",
+    "price": 6000,
+    "originalPrice": 9500,
+    "category": "VIP 5 Series 5",
+    "tag": "vip-5-series",
+    "seconds": 18971,
+    "tags": [
+      "all",
+      "vip",
+      "6-series",
+      "vip-5-series",
+      "penta",
+      "hexa"
+    ]
+  },
+  {
+    "number": "9797889999",
+    "price": 5500,
+    "originalPrice": 9000,
+    "category": "VIP Number",
+    "tag": "vip-numbers",
+    "seconds": 5778,
+    "tags": [
+      "all",
+      "vip",
+      "vip-numbers",
+      "9-series",
+      "triple9"
+    ]
+  },
+  {
+    "number": "7999999143",
+    "price": 4500,
+    "originalPrice": 7500,
+    "category": "VIP Number",
+    "tag": "vip-numbers",
+    "seconds": 4343,
+    "tags": [
+      "all",
+      "7-series",
+      "vip",
+      "vip-numbers",
+      "9-series",
+      "triple9"
+    ]
+  },
+  {
+    "number": "6262108108",
+    "price": 3500,
+    "originalPrice": 5500,
+    "category": "VIP Number",
+    "tag": "vip-numbers",
+    "seconds": 6392,
+    "tags": [
+      "all",
+      "vip-numbers",
+      "vip",
+      "6-series"
+    ]
+  },
+  {
+    "number": "7070370703",
+    "price": 8800,
+    "originalPrice": 14000,
+    "category": "Mirror Numbers",
+    "tag": "mirror-numbers",
+    "seconds": 7808,
+    "tags": [
+      "all",
+      "7-series",
+      "mirror",
+      "mirror-numbers"
+    ]
+  },
+  {
+    "number": "7222272222",
+    "price": 8800,
+    "originalPrice": 14000,
+    "category": "Mirror Numbers",
+    "tag": "mirror-numbers",
+    "seconds": 8042,
+    "tags": [
+      "all",
+      "7-series",
+      "mirror",
+      "mirror-numbers"
+    ]
+  },
+  {
+    "number": "7333373333",
+    "price": 8800,
+    "originalPrice": 14000,
+    "category": "Mirror Numbers",
+    "tag": "mirror-numbers",
+    "seconds": 16633,
+    "tags": [
+      "all",
+      "7-series",
+      "mirror",
+      "mirror-numbers"
+    ]
+  },
+  {
+    "number": "7100000000",
+    "price": 12500,
+    "originalPrice": 19000,
+    "category": "7 Series Numbers",
+    "tag": "7-series",
+    "seconds": 4881,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "hexa",
+      "0000"
+    ]
+  },
+  {
+    "number": "7200000000",
+    "price": 12500,
+    "originalPrice": 19000,
+    "category": "7 Series Numbers",
+    "tag": "7-series",
+    "seconds": 15408,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "hexa",
+      "0000"
+    ]
+  },
+  {
+    "number": "7600000000",
+    "price": 12500,
+    "originalPrice": 19000,
+    "category": "7 Series Numbers",
+    "tag": "7-series",
+    "seconds": 15304,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "hexa",
+      "0000"
+    ]
+  },
+  {
+    "number": "7444474444",
+    "price": 7000,
+    "originalPrice": 11000,
+    "category": "7 Series VIP Numbers",
+    "tag": "7-series-vip",
+    "seconds": 18137,
+    "tags": [
+      "all",
+      "7-series",
+      "vip",
+      "7-series-vip"
+    ]
+  },
+  {
+    "number": "7000006789",
+    "price": 7000,
+    "originalPrice": 11000,
+    "category": "7 Series VIP Numbers",
+    "tag": "7-series-vip",
+    "seconds": 11038,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "vip",
+      "0000",
+      "7-series-vip"
+    ]
+  },
+  {
+    "number": "7000007100",
+    "price": 7000,
+    "originalPrice": 11000,
+    "category": "7 Series VIP Numbers",
+    "tag": "7-series-vip",
+    "seconds": 3176,
+    "tags": [
+      "all",
+      "7-series",
+      "0000-ending",
+      "vip",
+      "0000",
+      "7-series-vip"
+    ]
+  },
+  {
+    "number": "7867867861",
+    "price": 8800,
+    "originalPrice": 14000,
+    "category": "786 Series Numbers",
+    "tag": "786-series",
+    "seconds": 6553,
+    "tags": [
+      "all",
+      "7-series",
+      "786",
+      "786-series"
+    ]
+  },
+  {
+    "number": "7867867862",
+    "price": 8800,
+    "originalPrice": 14000,
+    "category": "786 Series Numbers",
+    "tag": "786-series",
+    "seconds": 11543,
+    "tags": [
+      "all",
+      "7-series",
+      "786",
+      "786-series"
+    ]
+  },
+  {
+    "number": "6600000007",
+    "price": 6000,
+    "originalPrice": 9500,
+    "category": "6 Series Numbers",
+    "tag": "6-series",
+    "seconds": 13946,
+    "tags": [
+      "all",
+      "0000-ending",
+      "0000",
+      "6-series"
+    ]
+  },
+  {
+    "number": "6600000008",
+    "price": 6000,
+    "originalPrice": 9500,
+    "category": "6 Series Numbers",
+    "tag": "6-series",
+    "seconds": 6455,
+    "tags": [
+      "all",
+      "0000-ending",
+      "0000",
+      "6-series"
+    ]
+  },
+  {
+    "number": "6289898989",
+    "price": 5000,
+    "originalPrice": 8500,
+    "category": "6 Series Numbers",
+    "tag": "6-series",
+    "seconds": 12417,
+    "tags": [
+      "all",
+      "6-series"
+    ]
+  }
+]

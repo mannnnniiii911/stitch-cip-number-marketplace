@@ -5850,15 +5850,25 @@
         cardsCont.classList.add('content-fade-in');
       }
     }
-        cardsCont.classList.remove('hidden');
-        cardsCont.classList.add('content-fade-in');
+
+    // Verify numbers data source & dismiss skeletons with proper error handling
+    async function initNumbersData() {
+      try {
+        const response = await fetch('/data/numbers.json');
+        if (!response.ok) {
+          console.warn('Could not fetch /data/numbers.json, status:', response.status);
+        }
+      } catch (err) {
+        console.warn('Numbers data fetch error:', err);
+      } finally {
+        dismissSkeletons();
       }
     }
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', dismissSkeletons);
+      document.addEventListener('DOMContentLoaded', initNumbersData);
     } else {
-      dismissSkeletons();
+      initNumbersData();
     }
 
     // Sort order handler
