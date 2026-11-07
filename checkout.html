@@ -328,6 +328,46 @@
           </div>
         </div>
 
+                <!-- Desktop QR Code Expandable Display Box (visible when QR Code is selected) -->
+        <div id="desktop-qr-display-box" class="hidden mt-4 p-4 rounded-xl border border-brand-gold/40 bg-[#12131a] transition-all">
+          <div class="flex items-center justify-between pb-3 border-b border-[#232530] mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-bold text-white uppercase tracking-wider">Scan & Pay</span>
+              <span class="text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded bg-[#F5A623]/20 text-[#F5A623] border border-[#F5A623]/30">Instant QR</span>
+            </div>
+            <div class="text-right">
+              <span class="text-[11px] text-gray-400">Payable Amount: </span>
+              <span class="text-base font-extrabold text-[#F5A623] inline-price-amount" id="desktop-qr-price-display">₹12,250</span>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center gap-5 justify-center">
+            <!-- Uploaded QR Code Image Container -->
+            <div class="p-3 bg-white rounded-2xl shadow-xl flex-shrink-0 flex items-center justify-center border-2 border-brand-gold/30">
+              <img src="/upi-qr-code.jpg"
+                   alt="PhonePe UPI QR Code"
+                   class="w-44 h-44 sm:w-48 sm:h-48 object-contain rounded-lg"
+                   loading="eager" />
+            </div>
+            <div class="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 max-w-xs">
+              <div>
+                <p class="text-[11px] text-gray-400 uppercase tracking-wider font-semibold">Verified Merchant UPI ID</p>
+                <div class="inline-flex items-center gap-1.5 mt-1 px-2.5 py-1 rounded-lg bg-[#1a1c26] border border-brand-gold/40">
+                  <span class="font-mono text-sm font-bold text-brand-gold select-all">skdaneil@axl</span>
+                </div>
+              </div>
+              <p class="text-xs text-gray-300 leading-relaxed">
+                Scan this QR code using any UPI app to complete your payment.
+              </p>
+              <div class="flex flex-wrap items-center gap-1.5 pt-1">
+                <span class="text-[10px] text-gray-400 bg-neutral-900 px-2 py-0.5 rounded border border-neutral-800">PhonePe</span>
+                <span class="text-[10px] text-gray-400 bg-neutral-900 px-2 py-0.5 rounded border border-neutral-800">Google Pay</span>
+                <span class="text-[10px] text-gray-400 bg-neutral-900 px-2 py-0.5 rounded border border-neutral-800">Paytm</span>
+                <span class="text-[10px] text-gray-400 bg-neutral-900 px-2 py-0.5 rounded border border-neutral-800">BHIM UPI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- BEGIN: SecurePaymentBanner -->
         <div class="mt-6 p-3.5 sm:p-4 rounded-xl border border-[#302714] bg-[#111012] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
           <div class="flex items-center gap-3">
@@ -649,6 +689,32 @@
 
               </div>
 
+                            <!-- Mobile QR Code Display Box (visible when QR Code is selected) -->
+              <div id="mobile-qr-display-box" class="hidden mt-3 p-3.5 rounded-xl border border-brand-gold/40 bg-[#12131a] text-center space-y-2.5">
+                <div class="flex items-center justify-between pb-2 border-b border-[#232530]">
+                  <span class="text-xs font-bold text-white uppercase tracking-wider">Scan & Pay</span>
+                  <div class="text-right">
+                    <span class="text-[10px] text-gray-400">Amount: </span>
+                    <span class="text-xs font-extrabold text-[#F5A623] inline-price-amount" id="mobile-qr-price-display">₹12,250</span>
+                  </div>
+                </div>
+                <div class="p-2.5 bg-white rounded-xl shadow-lg inline-block mx-auto border-2 border-brand-gold/30">
+                  <img src="/upi-qr-code.jpg"
+                       alt="PhonePe UPI QR Code"
+                       class="w-44 h-44 object-contain rounded-md mx-auto"
+                       loading="eager" />
+                </div>
+                <div>
+                  <p class="text-[10px] text-gray-400 uppercase tracking-wider">Verified Payee UPI ID</p>
+                  <p class="font-mono text-xs font-bold text-brand-gold bg-[#1a1c26] inline-block px-2.5 py-0.5 rounded border border-brand-gold/30 mt-0.5 select-all">
+                    skdaneil@axl
+                  </p>
+                </div>
+                <p class="text-[11px] text-gray-300 leading-relaxed px-1">
+                  Scan this QR code using any UPI app to complete your payment.
+                </p>
+              </div>
+
               <!-- Secure Payment Badge (mobile inline) -->
               <div class="mt-3 pt-3 border-t border-[#1b1c24] flex items-center gap-2.5">
                 <svg class="w-4 h-4 text-[#F5A623] fill-current flex-shrink-0" viewBox="0 0 20 20">
@@ -744,35 +810,39 @@
 
 <!-- BEGIN: Payment Gateway Status / Configuration Modal -->
 <div class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-3 sm:p-4" id="payment-modal">
-  <div class="bg-[#0f1015] border border-[#F5A623]/40 rounded-2xl p-4 sm:p-7 w-full max-w-md text-left shadow-2xl space-y-4 max-h-[92vh] overflow-y-auto">
+  <div class="bg-[#0f1015] border border-[#F5A623]/40 rounded-2xl p-4 sm:p-6 w-full max-w-lg text-left shadow-2xl space-y-4 max-h-[94vh] overflow-y-auto">
     <div class="flex items-center justify-between pb-3 border-b border-[#232530] gap-2">
       <div class="flex items-center gap-2 min-w-0">
-        <span class="text-2xl flex-shrink-0">📋</span>
+        <span class="text-2xl flex-shrink-0">👑</span>
         <div class="min-w-0">
-          <h3 class="font-extrabold text-white text-sm sm:text-lg leading-tight truncate">Order Created &amp; Saved</h3>
+          <h3 class="font-extrabold text-white text-sm sm:text-lg leading-tight truncate">Complete Your VIP Reservation</h3>
           <p class="text-[11px] text-[#F5A623] font-mono truncate" id="modal-order-id">ORD-VIP-XXXXX</p>
         </div>
       </div>
-      <button class="text-gray-400 hover:text-white text-2xl p-1 flex-shrink-0 leading-none" onclick="closePaymentModal()">&times;</button>
+      <button class="text-gray-400 hover:text-white text-2xl p-1 flex-shrink-0 leading-none cursor-pointer" onclick="closePaymentModal()">&times;</button>
     </div>
 
-    <!-- Details Box -->
-    <div class="bg-[#161821] border border-[#272937] rounded-xl p-4 space-y-2 text-xs sm:text-sm">
+    <!-- Order Summary Box -->
+    <div class="bg-[#161821] border border-[#272937] rounded-xl p-3.5 sm:p-4 space-y-2 text-xs sm:text-sm">
       <div class="flex justify-between items-center text-gray-300">
         <span>Customer:</span>
         <span class="font-bold text-white truncate ml-2" id="modal-cust-name">Rahul Sharma</span>
       </div>
       <div class="flex justify-between items-center text-gray-300">
-        <span>VIP Number:</span>
+        <span>VIP Mobile Number:</span>
         <span class="font-mono font-bold text-[#F5A623]" id="modal-vip-number">70101 06666</span>
       </div>
       <div class="flex justify-between items-center text-gray-300">
-        <span>Payable Amount:</span>
-        <span class="font-extrabold text-white" id="modal-final-amount">₹12,250</span>
+        <span>Selected Payment Option:</span>
+        <span class="font-semibold text-emerald-400" id="modal-payment-method">UPI</span>
       </div>
       <div class="flex justify-between items-center text-gray-300">
-        <span>Payment Method:</span>
-        <span class="font-semibold text-emerald-400" id="modal-payment-method">UPI</span>
+        <span>Verified Payee UPI ID:</span>
+        <span class="font-mono font-bold text-brand-gold bg-[#241a08] px-2 py-0.5 rounded border border-[#4d360f] select-all">skdaneil@axl</span>
+      </div>
+      <div class="flex justify-between items-center text-gray-300 pt-1 border-t border-gray-800">
+        <span class="font-semibold text-gray-200">Payable Amount:</span>
+        <span class="text-lg sm:text-xl font-extrabold text-[#F5A623]" id="modal-final-amount">₹12,250</span>
       </div>
       <div class="flex justify-between items-center text-gray-300">
         <span>Payment Status:</span>
@@ -781,29 +851,88 @@
         </span>
       </div>
       <div class="flex justify-between items-start text-gray-300 pt-1 border-t border-gray-800">
-        <span class="shrink-0 mr-2">Delivery Address:</span>
-        <span class="font-medium text-gray-300 text-right text-[11px] break-words" id="modal-delivery-address">402 Royal Tower, Mumbai</span>
+        <span class="shrink-0 mr-2 text-[11px] text-gray-400">Delivery Address:</span>
+        <span class="font-medium text-gray-300 text-right text-[11px] break-words" id="modal-delivery-address">Address</span>
       </div>
     </div>
 
-    <!-- Clear Explanation of Payment Gateway Status -->
-    <div class="bg-amber-950/30 border border-amber-600/30 rounded-xl p-3.5 text-xs text-amber-200/90 leading-relaxed">
-      <strong class="text-amber-300 font-bold block mb-1">Payment Gateway Notice:</strong>
-      Your order details have been securely saved to the database. An automated payment gateway is not currently configured for instant card/UPI capture. To complete your allocation right now, verify your booking directly with our Senior Concierge.
+        <!-- Interactive UPI Payment Trigger Section -->
+    <div class="bg-[#111218] border border-brand-gold/30 rounded-xl p-4 text-center space-y-3">
+      
+      <!-- Direct UPI Payment CTA (for PhonePe, GPay, Paytm, UPI apps) -->
+      <div id="modal-direct-upi-box" class="space-y-2.5">
+        <div class="flex items-center justify-center gap-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Direct UPI Payment</span>
+        </div>
+        <a id="modal-upi-app-btn"
+           href="#"
+           class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#F5A623] to-[#ffb633] hover:from-[#ffb633] hover:to-[#F5A623] text-black font-extrabold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[#F5A623]/25 transition-all transform active:scale-98">
+          <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+          </svg>
+          <span>Open Installed UPI App to Pay</span>
+        </a>
+        <!-- Specific UPI App Links Pill -->
+        <div class="pt-1 flex flex-wrap items-center justify-center gap-2">
+          <a id="modal-phonepe-link" href="#" class="px-2.5 py-1.5 rounded-lg bg-[#5f259f]/20 border border-[#5f259f]/40 hover:bg-[#5f259f]/40 text-purple-200 text-[11px] font-semibold flex items-center gap-1 transition-colors">
+            <span>PhonePe</span>
+          </a>
+          <a id="modal-gpay-link" href="#" class="px-2.5 py-1.5 rounded-lg bg-blue-900/20 border border-blue-500/30 hover:bg-blue-900/40 text-blue-200 text-[11px] font-semibold flex items-center gap-1 transition-colors">
+            <span>Google Pay</span>
+          </a>
+          <a id="modal-paytm-link" href="#" class="px-2.5 py-1.5 rounded-lg bg-[#002e6e]/40 border border-[#00baf2]/30 hover:bg-[#002e6e]/60 text-cyan-200 text-[11px] font-semibold flex items-center gap-1 transition-colors">
+            <span>Paytm</span>
+          </a>
+          <a id="modal-bhim-link" href="#" class="px-2.5 py-1.5 rounded-lg bg-green-900/20 border border-green-500/30 hover:bg-green-900/40 text-green-200 text-[11px] font-semibold flex items-center gap-1 transition-colors">
+            <span>BHIM / Any UPI</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- QR Code Display Box (Always available / Prominent for QR Code selection) -->
+      <div id="modal-qr-container" class="pt-3 border-t border-neutral-800 flex flex-col items-center">
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Scan & Pay</span>
+        </div>
+        <div class="p-3 bg-white rounded-2xl shadow-xl inline-block mx-auto border-2 border-brand-gold/30">
+          <img id="modal-qr-img"
+               src="/upi-qr-code.jpg"
+               alt="Official PhonePe UPI QR Code"
+               class="w-48 h-48 sm:w-52 sm:h-52 object-contain rounded-lg mx-auto"
+               loading="eager" />
+        </div>
+        <div class="mt-2 text-center">
+          <p class="text-[10px] text-gray-400 uppercase tracking-wider font-semibold">Payee UPI ID:</p>
+          <p class="font-mono text-xs font-bold text-brand-gold bg-[#161822] inline-block px-3 py-1 rounded border border-brand-gold/30 mt-0.5 select-all">
+            skdaneil@axl
+          </p>
+        </div>
+        <p class="text-[11px] text-neutral-300 mt-2 leading-relaxed max-w-xs">
+          Scan this QR code using any UPI app to complete your payment.
+        </p>
+      </div>
+
     </div>
 
-    <!-- Action Buttons -->
-    <div class="space-y-2 pt-2">
-      <a class="w-full py-3 px-3 sm:px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-black font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md text-center" href="#" id="modal-concierge-btn" target="_blank">
-        <span>💬 Complete Booking via WhatsApp Concierge</span>
+    <!-- Payment Verification Policy Notice -->
+    <div class="bg-amber-950/30 border border-amber-600/30 rounded-xl p-3 text-[11px] text-amber-200/90 leading-relaxed">
+      <strong class="text-amber-300 font-bold block mb-0.5">🔒 Verification Protocol:</strong>
+      Your order status remains <span class="font-bold text-amber-300 uppercase">PENDING</span> until independent transaction confirmation. Once payment is initiated, connect via WhatsApp Concierge to instantly verify your reference ID for KYC and MNP release.
+    </div>
+
+    <!-- Secondary Concierge & Return CTAs -->
+    <div class="space-y-2 pt-1">
+      <a class="w-full py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-black font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md text-center" href="#" id="modal-concierge-btn" target="_blank" rel="noopener noreferrer">
+        <svg class="w-4 h-4 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Send Payment Screenshot via WhatsApp</span>
       </a>
-      <button class="w-full py-2.5 rounded-xl border border-gray-700 bg-neutral-900/80 hover:bg-neutral-800 text-gray-300 font-semibold text-xs tracking-wider transition-colors" onclick="closePaymentModal()">
+      <button class="w-full py-2.5 rounded-xl border border-gray-700 bg-neutral-900/80 hover:bg-neutral-800 text-gray-300 font-semibold text-xs tracking-wider transition-colors cursor-pointer" onclick="closePaymentModal()">
         Return to Checkout
       </button>
     </div>
   </div>
 </div>
-<!-- END: Payment Gateway Status Modal -->
+<!-- END: Payment Gateway Status / Configuration Modal -->
 
 <!-- BEGIN: ScriptHandlers -->
 <script data-purpose="checkout-logic">
@@ -1002,8 +1131,25 @@
     );
   }
 
+    // Helper to build standardized UPI URI
+  function buildUpiUri(pa, pn, amount, orderRef) {
+    const params = new URLSearchParams({
+      pa: pa,
+      pn: pn,
+      am: Number(amount).toFixed(2),
+      cu: 'INR',
+      tn: orderRef
+    });
+    return 'upi://pay?' + params.toString();
+  }
+
   // Payment Modal Functions
   function openPaymentModal(order) {
+    const upiPayee = 'skdaneil@axl';
+    const payeeName = 'VIP NUMBER CLUB';
+    const finalAmount = Number(order.amount).toFixed(2);
+    const orderRef = `VIP-${order.orderId}`;
+
     document.getElementById('modal-order-id').textContent = order.orderId;
     document.getElementById('modal-cust-name').textContent = `${order.customer.fullName} (+91 ${order.customer.mobileNumber})`;
     document.getElementById('modal-vip-number').textContent = order.displayNumber;
@@ -1011,12 +1157,73 @@
     document.getElementById('modal-payment-method').textContent = order.paymentMethod;
     document.getElementById('modal-delivery-address').textContent = `${order.customer.address}, ${order.customer.city}, ${order.customer.state} - ${order.customer.pincode}`;
 
-    // Prefill WhatsApp Concierge message
-    const waText = encodeURIComponent(`Hello VIP NUMBER CLUB! I have submitted my booking details for Order #${order.orderId}:\nVIP Number: ${order.displayNumber}\nName: ${order.customer.fullName}\nAmount: ${formatCurrency(order.amount)}\nMethod: ${order.paymentMethod}\nDelivery: ${order.customer.city}, ${order.customer.pincode}.\nPlease share the direct payment link/QR to complete verification.`);
+    // Standard UPI deep link
+    const upiUri = buildUpiUri(upiPayee, payeeName, finalAmount, orderRef);
+
+    // Primary mobile button deep link
+    const upiAppBtn = document.getElementById('modal-upi-app-btn');
+    if (upiAppBtn) {
+      upiAppBtn.setAttribute('href', upiUri);
+    }
+
+    // Specific UPI app links
+    const phonepeLink = document.getElementById('modal-phonepe-link');
+    if (phonepeLink) {
+      phonepeLink.setAttribute('href', `phonepe://pay?${new URLSearchParams({ pa: upiPayee, pn: payeeName, am: finalAmount, cu: 'INR', tn: orderRef }).toString()}`);
+    }
+
+    const gpayLink = document.getElementById('modal-gpay-link');
+    if (gpayLink) {
+      gpayLink.setAttribute('href', `tez://upi/pay?${new URLSearchParams({ pa: upiPayee, pn: payeeName, am: finalAmount, cu: 'INR', tn: orderRef }).toString()}`);
+    }
+
+    const paytmLink = document.getElementById('modal-paytm-link');
+    if (paytmLink) {
+      paytmLink.setAttribute('href', `paytmmp://pay?${new URLSearchParams({ pa: upiPayee, pn: payeeName, am: finalAmount, cu: 'INR', tn: orderRef }).toString()}`);
+    }
+
+    const bhimLink = document.getElementById('modal-bhim-link');
+    if (bhimLink) {
+      bhimLink.setAttribute('href', upiUri);
+    }
+
+    // Ensure original uploaded QR image is displayed with full quality
+    const qrImg = document.getElementById('modal-qr-img');
+    if (qrImg) {
+      qrImg.setAttribute('src', '/upi-qr-code.jpg');
+    }
+
+    // Toggle direct button or QR emphasis based on user's selection
+    const directBox = document.getElementById('modal-direct-upi-box');
+    const qrContainer = document.getElementById('modal-qr-container');
+    if (order.paymentMethod === 'QR Code') {
+      if (directBox) directBox.classList.add('order-2');
+      if (qrContainer) qrContainer.classList.add('order-1');
+    } else {
+      if (directBox) directBox.classList.remove('order-2');
+      if (qrContainer) qrContainer.classList.remove('order-1');
+    }
+
+    // Prefill WhatsApp Concierge message with UPI details
+    const waText = encodeURIComponent(`Hello VIP NUMBER CLUB! I have created Order #${order.orderId}:\nVIP Number: ${order.displayNumber}\nCustomer: ${order.customer.fullName} (+91 ${order.customer.mobileNumber})\nPayable Amount: ${formatCurrency(order.amount)}\nSelected Method: ${order.paymentMethod}\nUPI ID: ${upiPayee}\nRef: ${orderRef}\nDelivery: ${order.customer.city}, ${order.customer.pincode}.\nI am submitting my payment verification details.`);
     const waLink = `https://wa.me/917439478793?text=${waText}`;
-    document.getElementById('modal-concierge-btn').setAttribute('href', waLink);
+    const conciergeBtn = document.getElementById('modal-concierge-btn');
+    if (conciergeBtn) {
+      conciergeBtn.setAttribute('href', waLink);
+    }
 
     document.getElementById('payment-modal').classList.remove('hidden');
+
+    // On mobile devices, automatically prompt UPI app if user clicked Proceed with a UPI method
+    const isMobileDevice = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || '');
+    if (isMobileDevice) {
+      // Trigger deep link directly
+      try {
+        window.location.href = upiUri;
+      } catch (e) {
+        console.log('UPI deep link prompt error:', e);
+      }
+    }
   }
 
   function closePaymentModal() {
@@ -1045,6 +1252,14 @@
     setInterval(updateTimer, 1000);
 
     // 2. Payment Method Radio Selection Interaction (Synchronized across Desktop and Mobile)
+    function updateQrDisplays() {
+      const priceStr = formatCurrency(productData.price);
+      const desktopPrice = document.getElementById('desktop-qr-price-display');
+      const mobilePrice = document.getElementById('mobile-qr-price-display');
+      if (desktopPrice) desktopPrice.textContent = priceStr;
+      if (mobilePrice) mobilePrice.textContent = priceStr;
+    }
+
     function selectPaymentMethod(methodName) {
       selectedMethod = methodName || 'UPI';
       const allCards = document.querySelectorAll('.method-card');
@@ -1070,6 +1285,18 @@
           }
         }
       });
+
+      // Show or hide inline QR display box when QR Code is selected
+      const desktopQrBox = document.getElementById('desktop-qr-display-box');
+      const mobileQrBox = document.getElementById('mobile-qr-display-box');
+      if (selectedMethod === 'QR Code') {
+        updateQrDisplays();
+        if (desktopQrBox) desktopQrBox.classList.remove('hidden');
+        if (mobileQrBox) mobileQrBox.classList.remove('hidden');
+      } else {
+        if (desktopQrBox) desktopQrBox.classList.add('hidden');
+        if (mobileQrBox) mobileQrBox.classList.add('hidden');
+      }
     }
 
     const methodCards = document.querySelectorAll('.method-card');
@@ -1223,4 +1450,24 @@
   });
 </script>
 <!-- END: ScriptHandlers -->
+
+<!-- BEGIN: Floating WhatsApp Concierge Icon -->
+<div id="floating-whatsapp-widget" class="fixed bottom-6 right-4 sm:right-6 z-40 flex items-center group pointer-events-auto" style="padding-bottom: env(safe-area-inset-bottom, 0px);">
+  <a href="https://wa.me/917439478793"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with VIP Number Club Concierge on WhatsApp"
+     class="relative flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-[0_4px_20px_rgba(37,211,102,0.45)] hover:shadow-[0_6px_28px_rgba(37,211,102,0.65)] transform hover:scale-110 active:scale-95 transition-all duration-200 ease-out focus:outline-none focus:ring-4 focus:ring-[#25D366]/40">
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping -z-10 group-hover:opacity-20"></span>
+    <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current drop-shadow-sm" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="hidden lg:block absolute right-full mr-3.5 px-3 py-1.5 rounded-lg bg-neutral-900/95 border border-neutral-700/80 text-white text-xs font-semibold whitespace-nowrap shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+      Chat with Concierge
+      <span class="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-neutral-900 border-t border-r border-neutral-700/80 rotate-45"></span>
+    </span>
+  </a>
+</div>
+<!-- END: Floating WhatsApp Concierge Icon -->
+
 </body></html>

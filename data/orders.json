@@ -1,1 +1,48 @@
-[]
+[
+  {
+    "orderId": "ORD-VIP-MVU52XZ2-V6TN",
+    "vipNumber": "9999988888",
+    "displayNumber": "99999 88888",
+    "category": "VIP",
+    "amount": 5000,
+    "originalPrice": 8000,
+    "discount": 3000,
+    "customer": {
+      "fullName": "Test User",
+      "mobileNumber": "9876543210",
+      "whatsappNumber": "9876543210",
+      "address": "123 Test St",
+      "pincode": "110001",
+      "state": "Delhi",
+      "city": "Delhi"
+    },
+    "paymentMethod": "Google Pay",
+    "paymentStatus": "pending",
+    "paymentGatewayRef": null,
+    "createdAt": "2026-10-29T22:53:03.230Z",
+    "updatedAt": "2026-10-29T22:53:03.230Z"
+  },
+  {
+    "orderId": "ORD-VIP-MVU4TIQN-GZ8L",
+    "vipNumber": "7010106666",
+    "displayNumber": "70101 06666",
+    "category": "70101 Series — Repeating Numbers",
+    "amount": 12250,
+    "originalPrice": 18000,
+    "discount": 5750,
+    "customer": {
+      "fullName": "Vikram Singhania",
+      "mobileNumber": "9820098200",
+      "whatsappNumber": "9820098200",
+      "address": "Flat 12B, Antilla Heights, Worli",
+      "pincode": "400018",
+      "state": "Maharashtra",
+      "city": "Mumbai"
+    },
+    "paymentMethod": "UPI",
+    "paymentStatus": "pending",
+    "paymentGatewayRef": null,
+    "createdAt": "2026-10-29T22:45:43.583Z",
+    "updatedAt": "2026-10-29T22:45:43.583Z"
+  }
+]
