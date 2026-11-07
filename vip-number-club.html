@@ -65,6 +65,50 @@
   </style>
 <!-- Component & Animation Styles -->
 <style data-purpose="micro-interactions">
+    /* Luxury Gold Skeleton Shimmer System */
+    @keyframes luxuryShimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .skeleton-box {
+      position: relative;
+      overflow: hidden;
+      background-color: #14161f;
+      border-radius: 0.5rem;
+    }
+
+    .skeleton-box::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      transform: translateX(-100%);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(245, 179, 1, 0.05) 25%,
+        rgba(245, 179, 1, 0.16) 50%,
+        rgba(245, 179, 1, 0.05) 75%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      animation: luxuryShimmer 1.8s infinite ease-in-out;
+    }
+
+    .skeleton-card {
+      background: #0f1015;
+      border: 1px solid rgba(245, 179, 1, 0.15);
+      border-radius: 0.75rem;
+    }
+
+    .content-fade-in {
+      animation: contentFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes contentFadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .card-touch-press:active {
       transform: scale(0.98);
       transition: transform 0.12s ease;
@@ -188,34 +232,51 @@
       <span class="text-4xl md:text-5xl opacity-20">🪙</span>
     </div>
   </div>
-  <div class="max-w-5xl mx-auto">
-    <p class="text-[11px] md:text-xs font-bold tracking-widest uppercase text-brand-gold mb-2.5">
-      Welcome To VIP Number Club
-    </p>
-    <h2 class="font-luxury text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-brand-gold leading-tight max-w-[290px] md:max-w-[600px] mb-3 md:mb-5">
-      A Number That Defines You.
-    </h2>
-    <p class="text-xs md:text-sm text-neutral-400 leading-relaxed max-w-[340px] md:max-w-[500px] mb-5 md:mb-7">
-      Discover distinctive Indian mobile numbers from our private collection. Find your signature number and request exclusivity in a few clicks.
-    </p>
-    <!-- CTA Button -->
-    <a class="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-goldLight text-black font-bold text-xs md:text-sm uppercase tracking-wider px-5 md:px-7 py-3 md:py-3.5 rounded-md transition-all shadow-gold-sm active:scale-95" href="#collection-section">
-      <span>Explore Collection</span>
-      <span class="text-base leading-none">→</span>
-    </a>
-    <!-- Trust Stats Ticker -->
-    <div class="mt-7 pt-4 border-t border-neutral-800/80 grid grid-cols-3 gap-2 text-center max-w-md" data-purpose="hero-stats">
-      <div class="border-r border-neutral-800/80 pr-1">
-        <p class="text-brand-gold font-bold text-xs md:text-sm">100%</p>
-        <p class="text-[10px] md:text-xs text-neutral-400 mt-0.5">Private Inventory</p>
+  <div class="max-w-5xl mx-auto" id="hero-banner-container">
+    <!-- Hero Banner Shimmer Skeleton Placeholder -->
+    <div id="hero-banner-skeleton" class="space-y-3.5 hidden" aria-hidden="true">
+      <div class="skeleton-box h-4 w-36 rounded-full"></div>
+      <div class="skeleton-box h-10 md:h-14 w-4/5 max-w-lg rounded-xl"></div>
+      <div class="space-y-2 max-w-md pt-1">
+        <div class="skeleton-box h-3.5 w-full rounded"></div>
+        <div class="skeleton-box h-3.5 w-3/4 rounded"></div>
       </div>
-      <div class="border-r border-neutral-800/80 pr-1">
-        <p class="text-brand-gold font-bold text-xs md:text-sm">India</p>
-        <p class="text-[10px] md:text-xs text-neutral-400 mt-0.5">Mobile Numbers</p>
+      <div class="skeleton-box h-11 w-44 rounded-md my-4"></div>
+      <div class="grid grid-cols-3 gap-2 max-w-md pt-3 border-t border-neutral-800">
+        <div class="skeleton-box h-8 rounded-lg"></div>
+        <div class="skeleton-box h-8 rounded-lg"></div>
+        <div class="skeleton-box h-8 rounded-lg"></div>
       </div>
-      <div>
-        <p class="text-brand-gold font-bold text-xs md:text-sm">Direct</p>
-        <p class="text-[10px] md:text-xs text-neutral-400 mt-0.5">Enquiry</p>
+    </div>
+    <div id="hero-banner-content">
+      <p class="text-[11px] md:text-xs font-bold tracking-widest uppercase text-brand-gold mb-2.5">
+        Welcome To VIP Number Club
+      </p>
+      <h2 class="font-luxury text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-brand-gold leading-tight max-w-[290px] md:max-w-[600px] mb-3 md:mb-5">
+        A Number That Defines You.
+      </h2>
+      <p class="text-xs md:text-sm text-neutral-400 leading-relaxed max-w-[340px] md:max-w-[500px] mb-5 md:mb-7">
+        Discover distinctive Indian mobile numbers from our private collection. Find your signature number and request exclusivity in a few clicks.
+      </p>
+      <!-- CTA Button -->
+      <a class="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-goldLight text-black font-bold text-xs md:text-sm uppercase tracking-wider px-5 md:px-7 py-3 md:py-3.5 rounded-md transition-all shadow-gold-sm active:scale-95" href="#collection-section">
+        <span>Explore Collection</span>
+        <span class="text-base leading-none">→</span>
+      </a>
+      <!-- Trust Stats Ticker -->
+      <div class="mt-7 pt-4 border-t border-neutral-800/80 grid grid-cols-3 gap-2 text-center max-w-md" data-purpose="hero-stats">
+        <div class="border-r border-neutral-800/80 pr-1">
+          <p class="text-brand-gold font-bold text-xs md:text-sm">100%</p>
+          <p class="text-[10px] md:text-xs text-neutral-400 mt-0.5">Private Inventory</p>
+        </div>
+        <div class="border-r border-neutral-800/80 pr-1">
+          <p class="text-brand-gold font-bold text-xs md:text-sm">India</p>
+          <p class="text-[10px] md:text-xs text-neutral-400 mt-0.5">Mobile Numbers</p>
+        </div>
+        <div>
+          <p class="text-brand-gold font-bold text-xs md:text-sm">Direct</p>
+          <p class="text-[10px] md:text-xs text-neutral-400 mt-0.5">Enquiry</p>
+        </div>
       </div>
     </div>
   </div>
@@ -225,8 +286,19 @@
 <!-- BEGIN: Search & Filter Controls -->
 <section class="px-4 md:px-8 lg:px-16 pt-4 pb-2 space-y-3.5 bg-brand-dark" data-purpose="discovery-controls">
   <div class="max-w-5xl mx-auto space-y-3.5">
+    <!-- Category Horizontal Filter Scroll Skeleton -->
+    <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1" id="categoryChipsSkeleton" aria-hidden="true">
+      <div class="skeleton-box h-7 w-12 rounded-full flex-shrink-0"></div>
+      <div class="skeleton-box h-7 w-28 rounded-full flex-shrink-0"></div>
+      <div class="skeleton-box h-7 w-24 rounded-full flex-shrink-0"></div>
+      <div class="skeleton-box h-7 w-20 rounded-full flex-shrink-0"></div>
+      <div class="skeleton-box h-7 w-20 rounded-full flex-shrink-0"></div>
+      <div class="skeleton-box h-7 w-20 rounded-full flex-shrink-0"></div>
+      <div class="skeleton-box h-7 w-24 rounded-full flex-shrink-0"></div>
+      <div class="skeleton-box h-7 w-28 rounded-full flex-shrink-0"></div>
+    </div>
     <!-- Category Horizontal Filter Scroll -->
-    <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1" id="categoryChips">
+    <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 hidden" id="categoryChips">
       <button class="category-chip px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap bg-brand-gold text-black transition-colors" data-cat="all">
         All
       </button>
@@ -336,7 +408,191 @@
 <!-- BEGIN: VIP Numbers Grid -->
 <section class="px-4 md:px-8 lg:px-16 py-2" data-purpose="vip-numbers-grid">
   <div class="max-w-5xl mx-auto">
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-4" id="vipCardsContainer">
+    <!-- VIP Numbers Shimmer Skeleton Grid (8 cards matching exact layout) -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-4 mb-2" id="vipCardsSkeleton" aria-hidden="true">
+      <!-- Skeleton Card 1 -->
+      <div class="skeleton-card rounded-xl p-2.5 sm:p-3 md:p-3.5 flex flex-col justify-between h-[190px] sm:h-[215px]">
+        <div>
+          <div class="flex items-center justify-between pb-1.5 border-b border-neutral-800/80">
+            <div class="skeleton-box h-3 w-16 rounded"></div>
+            <div class="skeleton-box h-4 w-12 rounded"></div>
+          </div>
+          <div class="py-2.5 flex flex-col items-center justify-center space-y-2">
+            <div class="skeleton-box h-6 sm:h-7 w-28 sm:w-32 rounded-md"></div>
+            <div class="skeleton-box h-3.5 w-20 rounded-full"></div>
+            <div class="skeleton-box h-4 sm:h-5 w-24 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <div class="skeleton-box h-3.5 w-full rounded mb-1.5"></div>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Skeleton Card 2 -->
+      <div class="skeleton-card rounded-xl p-2.5 sm:p-3 md:p-3.5 flex flex-col justify-between h-[190px] sm:h-[215px]">
+        <div>
+          <div class="flex items-center justify-between pb-1.5 border-b border-neutral-800/80">
+            <div class="skeleton-box h-3 w-14 rounded"></div>
+            <div class="skeleton-box h-4 w-12 rounded"></div>
+          </div>
+          <div class="py-2.5 flex flex-col items-center justify-center space-y-2">
+            <div class="skeleton-box h-6 sm:h-7 w-28 sm:w-32 rounded-md"></div>
+            <div class="skeleton-box h-3.5 w-20 rounded-full"></div>
+            <div class="skeleton-box h-4 sm:h-5 w-20 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <div class="skeleton-box h-3.5 w-full rounded mb-1.5"></div>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Skeleton Card 3 -->
+      <div class="skeleton-card rounded-xl p-2.5 sm:p-3 md:p-3.5 flex flex-col justify-between h-[190px] sm:h-[215px]">
+        <div>
+          <div class="flex items-center justify-between pb-1.5 border-b border-neutral-800/80">
+            <div class="skeleton-box h-3 w-16 rounded"></div>
+            <div class="skeleton-box h-4 w-12 rounded"></div>
+          </div>
+          <div class="py-2.5 flex flex-col items-center justify-center space-y-2">
+            <div class="skeleton-box h-6 sm:h-7 w-28 sm:w-32 rounded-md"></div>
+            <div class="skeleton-box h-3.5 w-20 rounded-full"></div>
+            <div class="skeleton-box h-4 sm:h-5 w-24 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <div class="skeleton-box h-3.5 w-full rounded mb-1.5"></div>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Skeleton Card 4 -->
+      <div class="skeleton-card rounded-xl p-2.5 sm:p-3 md:p-3.5 flex flex-col justify-between h-[190px] sm:h-[215px]">
+        <div>
+          <div class="flex items-center justify-between pb-1.5 border-b border-neutral-800/80">
+            <div class="skeleton-box h-3 w-14 rounded"></div>
+            <div class="skeleton-box h-4 w-12 rounded"></div>
+          </div>
+          <div class="py-2.5 flex flex-col items-center justify-center space-y-2">
+            <div class="skeleton-box h-6 sm:h-7 w-28 sm:w-32 rounded-md"></div>
+            <div class="skeleton-box h-3.5 w-20 rounded-full"></div>
+            <div class="skeleton-box h-4 sm:h-5 w-20 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <div class="skeleton-box h-3.5 w-full rounded mb-1.5"></div>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Skeleton Card 5 -->
+      <div class="skeleton-card rounded-xl p-2.5 sm:p-3 md:p-3.5 flex flex-col justify-between h-[190px] sm:h-[215px]">
+        <div>
+          <div class="flex items-center justify-between pb-1.5 border-b border-neutral-800/80">
+            <div class="skeleton-box h-3 w-16 rounded"></div>
+            <div class="skeleton-box h-4 w-12 rounded"></div>
+          </div>
+          <div class="py-2.5 flex flex-col items-center justify-center space-y-2">
+            <div class="skeleton-box h-6 sm:h-7 w-28 sm:w-32 rounded-md"></div>
+            <div class="skeleton-box h-3.5 w-20 rounded-full"></div>
+            <div class="skeleton-box h-4 sm:h-5 w-24 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <div class="skeleton-box h-3.5 w-full rounded mb-1.5"></div>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Skeleton Card 6 -->
+      <div class="skeleton-card rounded-xl p-2.5 sm:p-3 md:p-3.5 flex flex-col justify-between h-[190px] sm:h-[215px]">
+        <div>
+          <div class="flex items-center justify-between pb-1.5 border-b border-neutral-800/80">
+            <div class="skeleton-box h-3 w-14 rounded"></div>
+            <div class="skeleton-box h-4 w-12 rounded"></div>
+          </div>
+          <div class="py-2.5 flex flex-col items-center justify-center space-y-2">
+            <div class="skeleton-box h-6 sm:h-7 w-28 sm:w-32 rounded-md"></div>
+            <div class="skeleton-box h-3.5 w-20 rounded-full"></div>
+            <div class="skeleton-box h-4 sm:h-5 w-20 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <div class="skeleton-box h-3.5 w-full rounded mb-1.5"></div>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Skeleton Card 7 -->
+      <div class="skeleton-card rounded-xl p-2.5 sm:p-3 md:p-3.5 flex flex-col justify-between h-[190px] sm:h-[215px]">
+        <div>
+          <div class="flex items-center justify-between pb-1.5 border-b border-neutral-800/80">
+            <div class="skeleton-box h-3 w-16 rounded"></div>
+            <div class="skeleton-box h-4 w-12 rounded"></div>
+          </div>
+          <div class="py-2.5 flex flex-col items-center justify-center space-y-2">
+            <div class="skeleton-box h-6 sm:h-7 w-28 sm:w-32 rounded-md"></div>
+            <div class="skeleton-box h-3.5 w-20 rounded-full"></div>
+            <div class="skeleton-box h-4 sm:h-5 w-24 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <div class="skeleton-box h-3.5 w-full rounded mb-1.5"></div>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Skeleton Card 8 -->
+      <div class="skeleton-card rounded-xl p-2.5 sm:p-3 md:p-3.5 flex flex-col justify-between h-[190px] sm:h-[215px]">
+        <div>
+          <div class="flex items-center justify-between pb-1.5 border-b border-neutral-800/80">
+            <div class="skeleton-box h-3 w-14 rounded"></div>
+            <div class="skeleton-box h-4 w-12 rounded"></div>
+          </div>
+          <div class="py-2.5 flex flex-col items-center justify-center space-y-2">
+            <div class="skeleton-box h-6 sm:h-7 w-28 sm:w-32 rounded-md"></div>
+            <div class="skeleton-box h-3.5 w-20 rounded-full"></div>
+            <div class="skeleton-box h-4 sm:h-5 w-20 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <div class="skeleton-box h-3.5 w-full rounded mb-1.5"></div>
+          <div class="grid grid-cols-2 gap-1">
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+            <div class="skeleton-box h-6 sm:h-7 rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error / No Results State with Retry -->
+    <div id="noResultsState" class="hidden py-12 px-4 text-center rounded-2xl bg-neutral-900/60 border border-neutral-800 my-2">
+      <div class="w-14 h-14 mx-auto mb-3.5 rounded-full bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-xl text-brand-gold">
+        🔍
+      </div>
+      <h4 class="text-base font-bold text-white mb-1">No VIP Numbers Found</h4>
+      <p class="text-xs text-neutral-400 max-w-sm mx-auto mb-4 leading-relaxed">No mobile numbers matched your search or selected filter. Try searching for specific digits or reset your filters.</p>
+      <button id="resetSearchBtn" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-gold text-black text-xs font-bold hover:bg-brand-goldLight transition-all cursor-pointer shadow-gold-sm">
+        <span>↻</span> Reset Search &amp; Show All Numbers
+      </button>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 md:gap-4 hidden" id="vipCardsContainer">
       <!-- Card 9000000000 -->
       <article class="number-card bg-brand-gold text-black rounded-xl p-2.5 sm:p-3 md:p-3.5 flex flex-col justify-between shadow-sm card-touch-press border border-amber-400/40" data-number="9000000000" data-price="25000" data-original-price="40000" data-tag="hexa" data-category="Hexa Numbers" data-tags="all 0000-ending hexa 9-series 0000">
         <div>
@@ -5488,6 +5744,64 @@
         }
       });
       numberCount.innerHTML = `<strong class="text-neutral-200">${visibleCount}</strong> available numbers`;
+      const noResultsState = document.getElementById('noResultsState');
+      if (visibleCount === 0) {
+        if (noResultsState) noResultsState.classList.remove('hidden');
+      } else {
+        if (noResultsState) noResultsState.classList.add('hidden');
+      }
+    }
+
+    // Reset Search & Retry Button
+    const resetBtn = document.getElementById('resetSearchBtn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        const allChip = document.querySelector('.category-chip[data-cat="all"]');
+        if (allChip) {
+          allChip.click();
+        } else {
+          filterCards('all', '');
+        }
+      });
+    }
+
+    // Premium Skeleton Dismissal System (No artificial delay)
+    function dismissSkeletons() {
+      const heroSkel = document.getElementById('hero-banner-skeleton');
+      const heroCont = document.getElementById('hero-banner-content');
+      const cardsSkel = document.getElementById('vipCardsSkeleton');
+      const cardsCont = document.getElementById('vipCardsContainer');
+      const catSkel = document.getElementById('categoryChipsSkeleton');
+      const catChips = document.getElementById('categoryChips');
+
+      if (heroSkel) heroSkel.classList.add('hidden');
+      if (heroCont) {
+        heroCont.classList.remove('hidden');
+        heroCont.classList.add('content-fade-in');
+      }
+
+      if (catSkel) catSkel.classList.add('hidden');
+      if (catChips) {
+        catChips.classList.remove('hidden');
+        catChips.classList.add('content-fade-in');
+      }
+
+      if (cardsSkel) cardsSkel.classList.add('hidden');
+      if (cardsCont) {
+        cardsCont.classList.remove('hidden');
+        cardsCont.classList.add('content-fade-in');
+      }
+    }
+        cardsCont.classList.remove('hidden');
+        cardsCont.classList.add('content-fade-in');
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', dismissSkeletons);
+    } else {
+      dismissSkeletons();
     }
 
     // Sort order handler
