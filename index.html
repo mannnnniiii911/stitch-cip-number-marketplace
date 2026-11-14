@@ -394,9 +394,9 @@
         <span id="numberCount"><strong class="text-neutral-200">125</strong> available numbers</span>
         <div class="flex items-center gap-1">
           <select class="bg-neutral-900 text-neutral-300 text-[11px] rounded border border-neutral-800 py-0.5 px-2 focus:ring-0 focus:border-brand-gold" id="sortSelect">
-            <option value="recent">Recently added ▾</option>
-            <option value="low-high">Price: Low to High</option>
+            <option value="low-high" selected>Price: Low to High</option>
             <option value="high-low">Price: High to Low</option>
+            <option value="recent">Recently added ▾</option>
           </select>
         </div>
       </div>
@@ -5872,18 +5872,26 @@
     }
 
     // Sort order handler
-    sortSelect.addEventListener('change', () => {
-      const mode = sortSelect.value;
-      const cardList = Array.from(cards);
+    const initialCardOrder = Array.from(cards);
 
+    function applySorting(mode) {
+      let cardList;
       if (mode === 'low-high') {
-        cardList.sort((a, b) => parseInt(a.dataset.price) - parseInt(b.dataset.price));
+        cardList = Array.from(cards).sort((a, b) => parseInt(a.dataset.price) - parseInt(b.dataset.price));
       } else if (mode === 'high-low') {
-        cardList.sort((a, b) => parseInt(b.dataset.price) - parseInt(a.dataset.price));
+        cardList = Array.from(cards).sort((a, b) => parseInt(b.dataset.price) - parseInt(a.dataset.price));
+      } else {
+        cardList = Array.from(initialCardOrder);
       }
-
       cardList.forEach(card => container.appendChild(card));
+    }
+
+    sortSelect.addEventListener('change', () => {
+      applySorting(sortSelect.value);
     });
+
+    // Apply default sorting: Ascending Price Order (Low to High)
+    applySorting('low-high');
 
         // Modal Interaction Simulations
     function handleEnquire(number, optPrice) {
