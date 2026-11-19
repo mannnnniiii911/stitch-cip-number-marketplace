@@ -6337,7 +6337,7 @@ fbq('track', 'PageView');
     // Set to true to display the full VIP numbers catalog and limited time offers.
     // Set to false to temporarily hide all numbers and keep skeleton loading cards active.
     // =========================================================================
-    const ENABLE_CATALOG = false;
+    const ENABLE_CATALOG = true;
 
     // Live Countdown Timers Implementation
     function formatTime(totalSeconds) {
@@ -6430,7 +6430,15 @@ fbq('track', 'PageView');
       }
     });
 
-    function filterCards(category, query) {
+    function filterCards(category = 'all', query = '') {
+      if (!category) {
+        const activeChip = document.querySelector('.category-chip.bg-brand-gold');
+        category = activeChip ? activeChip.getAttribute('data-cat') : 'all';
+      }
+      if (typeof query === 'undefined') {
+        query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      }
+
       if (!ENABLE_CATALOG) {
         const cardsCont = document.getElementById('vipCardsContainer');
         const cardsSkel = document.getElementById('vipCardsSkeleton');
@@ -6698,6 +6706,11 @@ fbq('track', 'PageView');
         const response = await fetch('/data/numbers.json');
         if (!response.ok) {
           console.warn('Could not fetch /data/numbers.json, status:', response.status);
+        } else {
+          const data = await response.json();
+          if (Array.isArray(data) && data.length > 0) {
+            window.__VIP_NUMBERS__ = data;
+          }
         }
       } catch (err) {
         console.warn('Numbers data fetch error:', err);
@@ -6709,7 +6722,7 @@ fbq('track', 'PageView');
         }
         // Sync number count with all visible cards on startup
         if (typeof filterCards === 'function') {
-          filterCards();
+          filterCards('all', '');
         }
       }
     }
