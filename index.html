@@ -399,12 +399,39 @@ fbq('track', 'PageView');
     </div>
     <!-- Filter Dropdown & Inventory Count -->
     <div class="pt-2 flex flex-col gap-2 max-w-xl">
-      <button class="w-full flex items-center justify-between bg-neutral-900/90 border border-neutral-800 rounded-lg px-3.5 py-2 text-xs text-neutral-300 hover:border-brand-gold" id="filterDropdownToggle">
+      <button class="w-full flex items-center justify-between bg-neutral-900/90 border border-neutral-800 rounded-lg px-3.5 py-2 text-xs text-neutral-300 hover:border-brand-gold transition-colors" id="filterDropdownToggle" aria-expanded="false">
         <span class="flex items-center gap-2">
           <span>🎛</span> Filter by operator and budget
         </span>
-        <span class="text-[10px] text-neutral-500">▾</span>
+        <span class="text-[10px] text-neutral-500 transition-transform duration-200" id="filterDropdownArrow">▾</span>
       </button>
+      <!-- Filter Panel (hidden by default) -->
+      <div id="filterDropdownPanel" class="hidden overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/90 px-4 py-3 space-y-3">
+        <!-- Budget Range -->
+        <div>
+          <p class="text-[10px] font-bold tracking-widest uppercase text-brand-gold mb-2">Budget Range</p>
+          <div class="flex flex-wrap gap-1.5" id="budgetChips">
+            <button class="budget-chip px-2.5 py-1 rounded-full text-[11px] font-medium border border-neutral-700 text-neutral-300 hover:border-brand-gold transition-colors" data-min="0" data-max="2000">Under ₹2,000</button>
+            <button class="budget-chip px-2.5 py-1 rounded-full text-[11px] font-medium border border-neutral-700 text-neutral-300 hover:border-brand-gold transition-colors" data-min="2000" data-max="5000">₹2,000–₹5,000</button>
+            <button class="budget-chip px-2.5 py-1 rounded-full text-[11px] font-medium border border-neutral-700 text-neutral-300 hover:border-brand-gold transition-colors" data-min="5000" data-max="15000">₹5,000–₹15,000</button>
+            <button class="budget-chip px-2.5 py-1 rounded-full text-[11px] font-medium border border-neutral-700 text-neutral-300 hover:border-brand-gold transition-colors" data-min="15000" data-max="99999999">Above ₹15,000</button>
+          </div>
+        </div>
+        <!-- Number Pattern -->
+        <div>
+          <p class="text-[10px] font-bold tracking-widest uppercase text-brand-gold mb-2">Pattern Type</p>
+          <div class="flex flex-wrap gap-1.5" id="patternChips">
+            <button class="pattern-chip px-2.5 py-1 rounded-full text-[11px] font-medium border border-neutral-700 text-neutral-300 hover:border-brand-gold transition-colors" data-pattern="repeating">Repeating Digits</button>
+            <button class="pattern-chip px-2.5 py-1 rounded-full text-[11px] font-medium border border-neutral-700 text-neutral-300 hover:border-brand-gold transition-colors" data-pattern="mirror">Mirror Numbers</button>
+            <button class="pattern-chip px-2.5 py-1 rounded-full text-[11px] font-medium border border-neutral-700 text-neutral-300 hover:border-brand-gold transition-colors" data-pattern="786">786 Lucky</button>
+            <button class="pattern-chip px-2.5 py-1 rounded-full text-[11px] font-medium border border-neutral-700 text-neutral-300 hover:border-brand-gold transition-colors" data-pattern="hexa">Hexa (6+ same digits)</button>
+          </div>
+        </div>
+        <!-- Reset -->
+        <div class="flex justify-end pt-1 border-t border-neutral-800">
+          <button id="resetFiltersBtn" class="text-[11px] text-brand-gold hover:text-brand-goldLight font-semibold transition-colors">✕ Clear Filters</button>
+        </div>
+      </div>
       <div class="flex items-center justify-between text-[11px] text-neutral-400 px-0.5">
         <span id="numberCount"><strong class="text-neutral-200">141</strong> available numbers</span>
         <div class="flex items-center gap-1">
@@ -6305,6 +6332,13 @@ fbq('track', 'PageView');
 
 <!-- JavaScript: Interaction handlers, dynamic search, sorting, filtering -->
 <script data-purpose="app-logic">
+    // =========================================================================
+    // CONFIGURATION FLAG: VIP NUMBER CATALOG VISIBILITY
+    // Set to true to display the full VIP numbers catalog and limited time offers.
+    // Set to false to temporarily hide all numbers and keep skeleton loading cards active.
+    // =========================================================================
+    const ENABLE_CATALOG = false;
+
     // Live Countdown Timers Implementation
     function formatTime(totalSeconds) {
       const hours = Math.floor(totalSeconds / 3600);
@@ -6365,7 +6399,7 @@ fbq('track', 'PageView');
         chip.classList.remove('bg-neutral-900', 'border', 'border-neutral-800', 'text-neutral-300');
 
         const cat = chip.getAttribute('data-cat');
-        filterCards(cat, searchInput.value.trim());
+        filterCards(cat, searchInput ? searchInput.value.trim().toLowerCase() : '');
       });
     });
 
@@ -6376,7 +6410,42 @@ fbq('track', 'PageView');
       filterCards(cat, e.target.value.trim().toLowerCase());
     });
 
+    // Search button click
+    const searchBtn = document.getElementById('searchBtn');
+    if (searchBtn) {
+      searchBtn.addEventListener('click', () => {
+        const activeChip = document.querySelector('.category-chip.bg-brand-gold');
+        const cat = activeChip ? activeChip.getAttribute('data-cat') : 'all';
+        filterCards(cat, searchInput.value.trim().toLowerCase());
+        document.getElementById('collection-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    // Search on Enter key
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const activeChip = document.querySelector('.category-chip.bg-brand-gold');
+        const cat = activeChip ? activeChip.getAttribute('data-cat') : 'all';
+        filterCards(cat, searchInput.value.trim().toLowerCase());
+      }
+    });
+
     function filterCards(category, query) {
+      if (!ENABLE_CATALOG) {
+        const cardsCont = document.getElementById('vipCardsContainer');
+        const cardsSkel = document.getElementById('vipCardsSkeleton');
+        const offerSection = document.getElementById('limitedTimeOffersSection');
+        const noResultsState = document.getElementById('noResultsState');
+        if (cardsCont) cardsCont.classList.add('hidden');
+        if (offerSection) offerSection.classList.add('hidden');
+        if (cardsSkel) {
+          cardsSkel.classList.remove('hidden');
+          cardsSkel.removeAttribute('aria-hidden');
+        }
+        if (noResultsState) noResultsState.classList.add('hidden');
+        return;
+      }
+
       let visibleCount = 0;
       const q = query ? query.toLowerCase().replace(/\s+/g, '') : '';
       cards.forEach(card => {
@@ -6384,6 +6453,7 @@ fbq('track', 'PageView');
         const tag = card.getAttribute('data-tag') || '';
         const cat = card.getAttribute('data-category') || '';
         const tags = (card.getAttribute('data-tags') || '').split(' ');
+        const cardPrice = parseInt(card.getAttribute('data-price') || '0', 10);
 
         let matchesCategory = false;
         if (category === 'all') {
@@ -6408,7 +6478,24 @@ fbq('track', 'PageView');
 
         const matchesSearch = !q || num.includes(q) || cat.toLowerCase().includes(q) || (card.dataset.price && card.dataset.price.includes(q));
 
-        if (matchesCategory && matchesSearch) {
+        // Budget filter
+        const matchesBudget = (typeof activeBudgetMin === 'undefined' || activeBudgetMin === 0 && activeBudgetMax === Infinity)
+          ? true
+          : (cardPrice >= activeBudgetMin && cardPrice <= activeBudgetMax);
+
+        // Pattern filter
+        let matchesPattern = activePatterns.length === 0;
+        if (!matchesPattern) {
+          matchesPattern = activePatterns.some(p => {
+            if (p === 'repeating') return tags.includes('70101-repeating') || tags.includes('mirror') || /((\d)\2{2,})/.test(num);
+            if (p === 'mirror') return tags.includes('mirror') || cat.toLowerCase().includes('mirror');
+            if (p === '786') return num.includes('786');
+            if (p === 'hexa') return tags.includes('hexa') || tag === 'hexa';
+            return false;
+          });
+        }
+
+        if (matchesCategory && matchesSearch && matchesBudget && matchesPattern) {
           card.classList.remove('hidden');
           visibleCount++;
         } else {
@@ -6449,7 +6536,96 @@ fbq('track', 'PageView');
       }
     }
 
-    // Reset Search & Retry Button
+    // ===== Filter Dropdown Toggle =====
+    const filterToggleBtn = document.getElementById('filterDropdownToggle');
+    const filterPanel = document.getElementById('filterDropdownPanel');
+    const filterArrow = document.getElementById('filterDropdownArrow');
+
+    if (filterToggleBtn && filterPanel) {
+      filterToggleBtn.addEventListener('click', () => {
+        const isOpen = !filterPanel.classList.contains('hidden');
+        if (isOpen) {
+          filterPanel.classList.add('hidden');
+          filterToggleBtn.setAttribute('aria-expanded', 'false');
+          if (filterArrow) filterArrow.style.transform = 'rotate(0deg)';
+        } else {
+          filterPanel.classList.remove('hidden');
+          filterToggleBtn.setAttribute('aria-expanded', 'true');
+          if (filterArrow) filterArrow.style.transform = 'rotate(180deg)';
+        }
+      });
+    }
+
+    // ===== Budget Filter Chips =====
+    let activeBudgetMin = 0;
+    let activeBudgetMax = Infinity;
+    let activePatterns = [];
+
+    document.querySelectorAll('.budget-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const min = parseInt(chip.getAttribute('data-min')) || 0;
+        const max = parseInt(chip.getAttribute('data-max')) || Infinity;
+
+        if (chip.classList.contains('bg-brand-gold')) {
+          // Deselect
+          chip.classList.remove('bg-brand-gold', 'text-black', 'border-brand-gold');
+          chip.classList.add('border-neutral-700', 'text-neutral-300');
+          activeBudgetMin = 0;
+          activeBudgetMax = Infinity;
+        } else {
+          // Deselect all others
+          document.querySelectorAll('.budget-chip').forEach(c => {
+            c.classList.remove('bg-brand-gold', 'text-black', 'border-brand-gold');
+            c.classList.add('border-neutral-700', 'text-neutral-300');
+          });
+          // Select this
+          chip.classList.add('bg-brand-gold', 'text-black', 'border-brand-gold');
+          chip.classList.remove('border-neutral-700', 'text-neutral-300');
+          activeBudgetMin = min;
+          activeBudgetMax = max;
+        }
+        applyAllFilters();
+      });
+    });
+
+    document.querySelectorAll('.pattern-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const pattern = chip.getAttribute('data-pattern');
+        if (chip.classList.contains('bg-brand-gold')) {
+          chip.classList.remove('bg-brand-gold', 'text-black', 'border-brand-gold');
+          chip.classList.add('border-neutral-700', 'text-neutral-300');
+          activePatterns = activePatterns.filter(p => p !== pattern);
+        } else {
+          chip.classList.add('bg-brand-gold', 'text-black', 'border-brand-gold');
+          chip.classList.remove('border-neutral-700', 'text-neutral-300');
+          activePatterns.push(pattern);
+        }
+        applyAllFilters();
+      });
+    });
+
+    const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+    if (resetFiltersBtn) {
+      resetFiltersBtn.addEventListener('click', () => {
+        document.querySelectorAll('.budget-chip, .pattern-chip').forEach(c => {
+          c.classList.remove('bg-brand-gold', 'text-black', 'border-brand-gold');
+          c.classList.add('border-neutral-700', 'text-neutral-300');
+        });
+        activeBudgetMin = 0;
+        activeBudgetMax = Infinity;
+        activePatterns = [];
+        applyAllFilters();
+      });
+    }
+
+    function applyAllFilters() {
+      const activeChip = document.querySelector('.category-chip.bg-brand-gold');
+      const cat = activeChip ? activeChip.getAttribute('data-cat') : 'all';
+      const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      filterCards(cat, q);
+    }
+
+    // ===== Reset Search & Retry Button =====
     const resetBtn = document.getElementById('resetSearchBtn');
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
@@ -6484,6 +6660,25 @@ fbq('track', 'PageView');
         catChips.classList.add('content-fade-in');
       }
 
+      // Catalog visibility controlled by ENABLE_CATALOG flag
+      if (!ENABLE_CATALOG) {
+        // Keep skeleton loading cards visible with continuous animation indefinitely
+        if (cardsSkel) {
+          cardsSkel.classList.remove('hidden');
+          cardsSkel.removeAttribute('aria-hidden');
+        }
+        // Ensure VIP numbers container remains hidden
+        if (cardsCont) {
+          cardsCont.classList.add('hidden');
+        }
+        // Ensure Limited Time Offers section remains hidden
+        const offersSec = document.getElementById('limitedTimeOffersSection');
+        if (offersSec) {
+          offersSec.classList.add('hidden');
+        }
+        return;
+      }
+
       if (cardsSkel) cardsSkel.classList.add('hidden');
       if (cardsCont) {
         cardsCont.classList.remove('hidden');
@@ -6508,6 +6703,14 @@ fbq('track', 'PageView');
         console.warn('Numbers data fetch error:', err);
       } finally {
         dismissSkeletons();
+        // Ensure default sort is applied once cards are in DOM
+        if (typeof applySorting === 'function') {
+          applySorting('low-high');
+        }
+        // Sync number count with all visible cards on startup
+        if (typeof filterCards === 'function') {
+          filterCards();
+        }
       }
     }
 
@@ -6609,6 +6812,44 @@ fbq('track', 'PageView');
     function closeModal() {
       document.getElementById('actionModal').classList.add('hidden');
     }
+
+    // Active mobile bottom nav highlight tracking based on scroll position
+    (function initMobileNavScroll() {
+      const mobileNavLinks = document.querySelectorAll('nav[data-purpose="mobile-nav"] a.nav-item');
+      if (!mobileNavLinks.length) return;
+
+      const navSections = [
+        { id: 'collection-section', href: '#collection-section' },
+        { id: 'reviews-section', href: '#reviews-section' },
+        { id: 'howitworks-section', href: '#howitworks-section' }
+      ];
+
+      function updateActiveMobileNav() {
+        const scrollPosition = window.scrollY + 200;
+        let currentActiveHref = '#';
+
+        for (let i = navSections.length - 1; i >= 0; i--) {
+          const sec = document.getElementById(navSections[i].id);
+          if (sec && sec.offsetTop <= scrollPosition) {
+            currentActiveHref = navSections[i].href;
+            break;
+          }
+        }
+
+        mobileNavLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === currentActiveHref) {
+            link.classList.remove('text-neutral-400');
+            link.classList.add('text-brand-gold');
+          } else {
+            link.classList.remove('text-brand-gold');
+            link.classList.add('text-neutral-400');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveMobileNav, { passive: true });
+    })();
   </script>
 
   <!-- FAQ Accordion -->
