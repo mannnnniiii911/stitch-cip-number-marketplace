@@ -6511,26 +6511,33 @@ fbq('track', 'PageView');
         }
       });
 
-      // Filter limited time offer cards
+      // Filter limited time offer cards (Exclusive Flash Deals)
+      // Required: Display ONLY when category is 'all'
       const offerCards = document.querySelectorAll('.limited-offer-card');
       const offerSection = document.getElementById('limitedTimeOffersSection');
       let visibleOfferCount = 0;
       if (offerCards.length > 0 && offerSection) {
-        offerCards.forEach(card => {
-          const num = card.getAttribute('data-number') || '';
-          const matchesSearch = !q || num.includes(q) || (card.dataset.price && card.dataset.price.includes(q));
-          const matchesCategory = (category === 'all' || category === 'vip' || category === '7-series' || num.includes('70101'));
-          if (matchesSearch && matchesCategory) {
-            card.classList.remove('hidden');
-            visibleOfferCount++;
+        if (category === 'all') {
+          offerCards.forEach(card => {
+            const num = card.getAttribute('data-number') || '';
+            const matchesSearch = !q || num.includes(q) || (card.dataset.price && card.dataset.price.includes(q));
+            if (matchesSearch) {
+              card.classList.remove('hidden');
+              visibleOfferCount++;
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+          if (visibleOfferCount > 0) {
+            offerSection.classList.remove('hidden');
           } else {
-            card.classList.add('hidden');
+            offerSection.classList.add('hidden');
           }
-        });
-        if (visibleOfferCount === 0 && (q || (category !== 'all' && category !== 'vip' && category !== '7-series'))) {
-          offerSection.classList.add('hidden');
         } else {
-          offerSection.classList.remove('hidden');
+          // Hide all offer cards and the entire section whenever any other category is selected
+          offerCards.forEach(card => card.classList.add('hidden'));
+          offerSection.classList.add('hidden');
+          visibleOfferCount = 0;
         }
       }
 
