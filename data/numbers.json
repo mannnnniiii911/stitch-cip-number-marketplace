@@ -3153,5 +3153,714 @@
       "penta",
       "triple9"
     ]
+  },
+  {
+    "number": "6200000001",
+    "price": 11000,
+    "originalPrice": 18000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6820,
+    "tags": [
+      "all",
+      "royal",
+      "6-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "6300000001",
+    "price": 12000,
+    "originalPrice": 19000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7120,
+    "tags": [
+      "all",
+      "royal",
+      "6-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "6400000001",
+    "price": 13500,
+    "originalPrice": 21500,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6420,
+    "tags": [
+      "all",
+      "royal",
+      "6-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "6500000001",
+    "price": 14000,
+    "originalPrice": 22000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7320,
+    "tags": [
+      "all",
+      "royal",
+      "6-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "7000000001",
+    "price": 15500,
+    "originalPrice": 24000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6920,
+    "tags": [
+      "all",
+      "royal",
+      "7-series",
+      "hexa",
+      "0000"
+    ]
+  },
+  {
+    "number": "7100000001",
+    "price": 17000,
+    "originalPrice": 26000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6620,
+    "tags": [
+      "all",
+      "royal",
+      "7-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "7200000001",
+    "price": 18500,
+    "originalPrice": 28000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7420,
+    "tags": [
+      "all",
+      "royal",
+      "7-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "8000000001",
+    "price": 20000,
+    "originalPrice": 32000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7520,
+    "tags": [
+      "all",
+      "royal",
+      "8-series",
+      "hexa",
+      "0000"
+    ]
+  },
+  {
+    "number": "9000000001",
+    "price": 22000,
+    "originalPrice": 35000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7020,
+    "tags": [
+      "all",
+      "royal",
+      "9-series",
+      "hexa",
+      "0000"
+    ]
+  },
+  {
+    "number": "9999900001",
+    "price": 24000,
+    "originalPrice": 38000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7620,
+    "tags": [
+      "all",
+      "royal",
+      "premium",
+      "9-series",
+      "penta",
+      "triple9",
+      "0000"
+    ]
+  },
+  {
+    "number": "6210101010",
+    "price": 3000,
+    "originalPrice": 4999,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6320,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "6-series"
+    ]
+  },
+  {
+    "number": "6310101020",
+    "price": 3200,
+    "originalPrice": 5299,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6720,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "6-series"
+    ]
+  },
+  {
+    "number": "7010101030",
+    "price": 3500,
+    "originalPrice": 5499,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6520,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "7-series",
+      "70101"
+    ]
+  },
+  {
+    "number": "7210101040",
+    "price": 3800,
+    "originalPrice": 5999,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 7120,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "7-series"
+    ]
+  },
+  {
+    "number": "8010101050",
+    "price": 4000,
+    "originalPrice": 6499,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6820,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "8-series"
+    ]
+  },
+  {
+    "number": "8110101060",
+    "price": 4200,
+    "originalPrice": 6799,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 7220,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "8-series"
+    ]
+  },
+  {
+    "number": "9010101070",
+    "price": 4500,
+    "originalPrice": 7199,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6620,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9110101080",
+    "price": 4700,
+    "originalPrice": 7499,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 7420,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9810101090",
+    "price": 4900,
+    "originalPrice": 7899,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6920,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9910101010",
+    "price": 5000,
+    "originalPrice": 7999,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 7520,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "9-series"
+    ]
+  },
+  {
+    "number": "6207861234",
+    "price": 3000,
+    "originalPrice": 4999,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 6420,
+    "tags": [
+      "all",
+      "786",
+      "6-series",
+      "sequence"
+    ]
+  },
+  {
+    "number": "6300786123",
+    "price": 3200,
+    "originalPrice": 5299,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 6720,
+    "tags": [
+      "all",
+      "786",
+      "6-series",
+      "sequence"
+    ]
+  },
+  {
+    "number": "7001234786",
+    "price": 3500,
+    "originalPrice": 5499,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 7120,
+    "tags": [
+      "all",
+      "786",
+      "7-series",
+      "sequence"
+    ]
+  },
+  {
+    "number": "7107860786",
+    "price": 3800,
+    "originalPrice": 5999,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 6820,
+    "tags": [
+      "all",
+      "786",
+      "7-series",
+      "repeating"
+    ]
+  },
+  {
+    "number": "8007861234",
+    "price": 4000,
+    "originalPrice": 6499,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 7320,
+    "tags": [
+      "all",
+      "786",
+      "8-series",
+      "sequence"
+    ]
+  },
+  {
+    "number": "8101234786",
+    "price": 4200,
+    "originalPrice": 6799,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 6620,
+    "tags": [
+      "all",
+      "786",
+      "8-series",
+      "sequence"
+    ]
+  },
+  {
+    "number": "9007861234",
+    "price": 4500,
+    "originalPrice": 7199,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 7520,
+    "tags": [
+      "all",
+      "786",
+      "9-series",
+      "sequence"
+    ]
+  },
+  {
+    "number": "9101234786",
+    "price": 4700,
+    "originalPrice": 7499,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 6920,
+    "tags": [
+      "all",
+      "786",
+      "9-series",
+      "sequence"
+    ]
+  },
+  {
+    "number": "9878601234",
+    "price": 4900,
+    "originalPrice": 7899,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 7220,
+    "tags": [
+      "all",
+      "786",
+      "9-series",
+      "sequence"
+    ]
+  },
+  {
+    "number": "9986786786",
+    "price": 5000,
+    "originalPrice": 7999,
+    "category": "786 Numbers",
+    "tag": "786",
+    "seconds": 7620,
+    "tags": [
+      "all",
+      "786",
+      "9-series",
+      "repeating"
+    ]
+  },
+  {
+    "number": "6213131234",
+    "price": 2800,
+    "originalPrice": 4499,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6320,
+    "tags": [
+      "all",
+      "repeating",
+      "unique",
+      "6-series"
+    ]
+  },
+  {
+    "number": "6312313131",
+    "price": 3100,
+    "originalPrice": 4999,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6720,
+    "tags": [
+      "all",
+      "repeating",
+      "stylish",
+      "6-series"
+    ]
+  },
+  {
+    "number": "7013130786",
+    "price": 3400,
+    "originalPrice": 5499,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 7120,
+    "tags": [
+      "all",
+      "repeating",
+      "786",
+      "7-series"
+    ]
+  },
+  {
+    "number": "7213131313",
+    "price": 3700,
+    "originalPrice": 5999,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6820,
+    "tags": [
+      "all",
+      "repeating",
+      "hexa",
+      "7-series"
+    ]
+  },
+  {
+    "number": "8013131234",
+    "price": 4000,
+    "originalPrice": 6499,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 7320,
+    "tags": [
+      "all",
+      "repeating",
+      "unique",
+      "8-series"
+    ]
+  },
+  {
+    "number": "8113131313",
+    "price": 4300,
+    "originalPrice": 6999,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6620,
+    "tags": [
+      "all",
+      "repeating",
+      "hexa",
+      "8-series"
+    ]
+  },
+  {
+    "number": "9013131234",
+    "price": 4600,
+    "originalPrice": 7299,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 7420,
+    "tags": [
+      "all",
+      "repeating",
+      "unique",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9113131313",
+    "price": 4900,
+    "originalPrice": 7899,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 6920,
+    "tags": [
+      "all",
+      "repeating",
+      "hexa",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9813130786",
+    "price": 5200,
+    "originalPrice": 8299,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 7520,
+    "tags": [
+      "all",
+      "repeating",
+      "786",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9913131313",
+    "price": 5500,
+    "originalPrice": 8699,
+    "category": "Repeating Numbers",
+    "tag": "repeating",
+    "seconds": 7720,
+    "tags": [
+      "all",
+      "repeating",
+      "hexa",
+      "9-series"
+    ]
+  },
+  {
+    "number": "6201131234",
+    "price": 4000,
+    "originalPrice": 6499,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 6520,
+    "tags": [
+      "all",
+      "unique",
+      "6-series"
+    ]
+  },
+  {
+    "number": "6300113123",
+    "price": 4200,
+    "originalPrice": 6799,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 6820,
+    "tags": [
+      "all",
+      "unique",
+      "6-series"
+    ]
+  },
+  {
+    "number": "7011311311",
+    "price": 4400,
+    "originalPrice": 6999,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 7220,
+    "tags": [
+      "all",
+      "unique",
+      "repeating",
+      "7-series"
+    ]
+  },
+  {
+    "number": "7211312345",
+    "price": 4600,
+    "originalPrice": 7399,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 6920,
+    "tags": [
+      "all",
+      "unique",
+      "sequence",
+      "7-series"
+    ]
+  },
+  {
+    "number": "8011311313",
+    "price": 4800,
+    "originalPrice": 7499,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 7420,
+    "tags": [
+      "all",
+      "unique",
+      "repeating",
+      "8-series"
+    ]
+  },
+  {
+    "number": "8111311234",
+    "price": 5000,
+    "originalPrice": 7999,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 6720,
+    "tags": [
+      "all",
+      "unique",
+      "8-series"
+    ]
+  },
+  {
+    "number": "9011311311",
+    "price": 5200,
+    "originalPrice": 8299,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 7520,
+    "tags": [
+      "all",
+      "unique",
+      "repeating",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9111311234",
+    "price": 5400,
+    "originalPrice": 8499,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 7120,
+    "tags": [
+      "all",
+      "unique",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9811310786",
+    "price": 5700,
+    "originalPrice": 8999,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 7620,
+    "tags": [
+      "all",
+      "unique",
+      "786",
+      "9-series"
+    ]
+  },
+  {
+    "number": "9911311313",
+    "price": 6000,
+    "originalPrice": 9499,
+    "category": "Unique Numbers",
+    "tag": "unique",
+    "seconds": 7820,
+    "tags": [
+      "all",
+      "unique",
+      "repeating",
+      "9-series"
+    ]
   }
 ]
