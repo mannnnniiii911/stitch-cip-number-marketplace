@@ -2852,5 +2852,306 @@
       "hexa",
       "9-series"
     ]
+  },
+  {
+    "number": "6200000777",
+    "price": 11000,
+    "originalPrice": 18000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6820,
+    "tags": [
+      "all",
+      "royal",
+      "6-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "6300000777",
+    "price": 11500,
+    "originalPrice": 18500,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7120,
+    "tags": [
+      "all",
+      "royal",
+      "6-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "6400000777",
+    "price": 12000,
+    "originalPrice": 19000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6420,
+    "tags": [
+      "all",
+      "royal",
+      "6-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "6500000777",
+    "price": 12500,
+    "originalPrice": 19500,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7320,
+    "tags": [
+      "all",
+      "royal",
+      "6-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "7000000777",
+    "price": 13000,
+    "originalPrice": 21000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6920,
+    "tags": [
+      "all",
+      "royal",
+      "7-series",
+      "hexa",
+      "0000"
+    ]
+  },
+  {
+    "number": "7100000777",
+    "price": 13500,
+    "originalPrice": 21500,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6620,
+    "tags": [
+      "all",
+      "royal",
+      "7-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "7200000777",
+    "price": 14000,
+    "originalPrice": 22000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7420,
+    "tags": [
+      "all",
+      "royal",
+      "7-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "7300000777",
+    "price": 14500,
+    "originalPrice": 22500,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6720,
+    "tags": [
+      "all",
+      "royal",
+      "7-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "8000000777",
+    "price": 15000,
+    "originalPrice": 24000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7520,
+    "tags": [
+      "all",
+      "royal",
+      "8-series",
+      "hexa",
+      "0000"
+    ]
+  },
+  {
+    "number": "8100000777",
+    "price": 15500,
+    "originalPrice": 24500,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6820,
+    "tags": [
+      "all",
+      "royal",
+      "8-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "8200000777",
+    "price": 16000,
+    "originalPrice": 25000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7220,
+    "tags": [
+      "all",
+      "royal",
+      "8-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "8300000777",
+    "price": 16500,
+    "originalPrice": 25500,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6520,
+    "tags": [
+      "all",
+      "royal",
+      "8-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "9000000777",
+    "price": 17000,
+    "originalPrice": 26000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7020,
+    "tags": [
+      "all",
+      "royal",
+      "9-series",
+      "hexa",
+      "0000"
+    ]
+  },
+  {
+    "number": "9100000777",
+    "price": 17500,
+    "originalPrice": 26500,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6620,
+    "tags": [
+      "all",
+      "royal",
+      "9-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "9200000777",
+    "price": 18000,
+    "originalPrice": 27000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7320,
+    "tags": [
+      "all",
+      "royal",
+      "9-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "9300000777",
+    "price": 18500,
+    "originalPrice": 27500,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 6720,
+    "tags": [
+      "all",
+      "royal",
+      "9-series",
+      "penta",
+      "0000"
+    ]
+  },
+  {
+    "number": "9876500777",
+    "price": 19000,
+    "originalPrice": 29000,
+    "category": "Premium Numbers",
+    "tag": "premium",
+    "seconds": 7620,
+    "tags": [
+      "all",
+      "premium",
+      "sequence",
+      "9-series",
+      "unique"
+    ]
+  },
+  {
+    "number": "9878900777",
+    "price": 19500,
+    "originalPrice": 29500,
+    "category": "Premium Numbers",
+    "tag": "premium",
+    "seconds": 6920,
+    "tags": [
+      "all",
+      "premium",
+      "stylish",
+      "9-series",
+      "unique"
+    ]
+  },
+  {
+    "number": "9988800777",
+    "price": 20000,
+    "originalPrice": 32000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7120,
+    "tags": [
+      "all",
+      "royal",
+      "premium",
+      "9-series",
+      "penta"
+    ]
+  },
+  {
+    "number": "9999900777",
+    "price": 21000,
+    "originalPrice": 35000,
+    "category": "Royal Numbers",
+    "tag": "royal",
+    "seconds": 7420,
+    "tags": [
+      "all",
+      "royal",
+      "premium",
+      "9-series",
+      "penta",
+      "triple9"
+    ]
   }
 ]
